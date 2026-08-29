@@ -1,0 +1,7 @@
+# Vendored Agent Skills (re-add with: npx skills add supabase/agent-skills)
+/.agents/
+/.claude/skills/
+
+# OS / editor
+.DS_Store
+Thumbs.db
