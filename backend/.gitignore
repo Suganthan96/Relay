@@ -4,3 +4,6 @@ dist
 .env.local
 *.log
 .keys/
+.workspace/
+*.pem
+private-key.pem

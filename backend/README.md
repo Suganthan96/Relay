@@ -11,17 +11,19 @@ The trust + orchestration layer from `relay-project-description.md`. Node 22 + T
 | §4 | Ed25519 keypairs + `did:key` (`src/identity/`) | ✅ working |
 | §4 | Canonical payload + sign/verify | ✅ working (`npm run demo:sign`) |
 | §4 | Signed `task_attempts` writer (`src/db/attempts.ts`) | ✅ **verified end-to-end** (`npm run db:verify`) against the live DB |
-| §3 | Coordinator + pipeline | ⏳ next |
-| §3 | Planner / Coder / Tester / Reviewer agents | ⏳ |
-| §3 | Reputation gate | ⏳ (SQL `recompute_reputation` done) |
-| §3 | GitHub issue ingestion + Octokit PR | ⏳ |
+| §3 | Coordinator + pipeline (`src/coordinator/pipeline.ts`) | ✅ runs end-to-end (`npm run pipeline`) |
+| §3 | Planner / Coder / Tester / Reviewer agents | ✅ all four are real headless `claude -p` runs (no API key) |
+| §3 | Reputation gate (`src/coordinator/reputation.ts`) | ✅ per `(agent, task_type)`; escalates on no/low history or sensitive area |
+| §3 | Octokit PR (`src/github/pr.ts`) | ✅ fast-approve / flagged PR via a GitHub App installation token; else stops at a signed decision packet |
+| §3 | GitHub issue ingestion — App webhook (`src/server.ts`) | ✅ `issues.opened` → `createTask` → detached `runPipeline` |
 | §5 | Dashboard trust graph | ⏳ (in `../frontend`) |
 
 ## Setup
 
 ```bash
 npm install
-cp .env.example .env          # SUPABASE_URL is prefilled; add the keys / Anthropic / GitHub
+cp .env.example .env          # SUPABASE_URL is prefilled; add the Supabase keys + GitHub App
+#                              agents use the machine's Claude Code login — no API key
 
 # 1. link the Supabase CLI to the project (one-time, interactive)
 npx supabase login                                   # opens browser / paste token
@@ -37,10 +39,43 @@ npm run keys:gen
 npm run db:push
 ```
 
+## Running the pipeline
+
+### Automatic — GitHub App webhook (md 3)
+
+```bash
+npm run serve        # Express server, POST /webhook, port 8787
+```
+
+Set up once:
+1. Create a GitHub App — permissions **Issues: read**, **Contents: write**, **Pull requests: write**; subscribe to the **Issues** event.
+2. Webhook URL → `https://<public-host>/webhook` (dev: `cloudflared tunnel --url http://localhost:8787`), webhook secret → `GITHUB_WEBHOOK_SECRET`.
+3. Download the App's private key `.pem` → `backend/private-key.pem`; App ID → `GITHUB_APP_ID`.
+4. Install the App on the target repo(s).
+
+Opening an issue then creates a task and runs Planner → Coder → Tester → Reviewer,
+opening a PR (fast-approve or flagged) with an installation token. Set
+`RELAY_ISSUE_LABEL` to only act on labelled issues.
+
+### Manual — CLI
+
+```bash
+npm run pipeline -- issue "<title>" --body "<details>" --repo owner/name
+#   --repo also accepts a local path or file:// URL (for testing)
+#   with no GitHub App and no GITHUB_TOKEN, the run stops at a signed decision packet
+npm run pipeline -- run <taskId>
+```
+
+Flow (`src/coordinator/pipeline.ts`): `planning → [reputation gate] → coding → testing → reviewing → pr_opened | escalated`.
+A signed `task_attempt` is written after every handoff and chained via `parent_attempt_id`.
+
 ## Scripts
 
 | command | what it does |
 |---|---|
+| `npm run serve` | GitHub App webhook receiver — issue opened → task → pipeline |
+| `npm run pipeline -- issue "..." --repo ...` | create a task and run Planner → Coder → Tester → Reviewer |
+| `npm run pipeline -- run <taskId>` | re-run the pipeline on an existing task |
 | `npm run demo:sign` | offline: sign an attempt, verify ✓, tamper a field, verify ✗ (md §4 demo) |
 | `npm run keys:gen` | write `./.keys/agents.json` (add `-- --force` to regenerate) |
 | `npm run db:migrate` | `supabase db push` — apply migrations to the linked project |
@@ -51,23 +86,37 @@ npm run db:push
 ## Layout
 
 ```
-supabase/
-  config.toml              CLI project config
-  migrations/
-    *_initial_schema.sql   tables: agents, tasks, task_attempts, reputation_scores + recompute_reputation()
+supabase/migrations/
+  *_initial_schema.sql     tables: agents, tasks, task_attempts, reputation_scores
+  *_seed_agents.sql        the four agent DIDs
+  *_reputation_v3.sql      recompute_reputation(): coder/planner scored by final test outcome
+src/server.ts              GitHub App webhook receiver (issues.opened -> pipeline)
+src/index.ts               CLI entrypoint (issue / run)
 src/config.ts              env access
 src/identity/
   did.ts                   publicKey <-> did:key:z6Mk... (ed25519-pub multicodec + base58btc)
   canonical.ts             deterministic JSON for the signed payload
   signing.ts               AttestationPayload, signPayload / verifyPayload
-  keys.ts                  AgentKey, newAgentKey, loadAgentKeys
-  generate.ts              `keys:gen` entrypoint
-  demo.ts                  `demo:sign` entrypoint
+  keys.ts / generate.ts / demo.ts
 src/db/
   client.ts                service-role Supabase client
   types.ts                 row types
   agents.ts                loadAgents() — the four agent rows keyed by role
+  tasks.ts                 createTask / getTask / patchTask (status state machine)
   attempts.ts              recordAttempt() + verifyAttemptRow() (signature + column consistency)
-  push.ts                  `db:push` entrypoint
-  verify-e2e.ts            `db:verify` entrypoint
+  push.ts / verify-e2e.ts
+src/agents/
+  claude.ts                headless `claude -p` runner (stdin prompt, JSON out, retry)
+  types.ts                 agent input/result interfaces
+  planner.ts               issue -> task_type + declared scope + plan + allowed paths
+  coder.ts                 headless edit in the clone, scoped to allowed tools
+  tester.ts                headless test run, no writes, PASS/FAIL
+  reviewer.ts              diff + tests + reputation -> fast_approve | flagged_review
+src/coordinator/
+  reputation.ts            getReputation() + evaluateGate() (proceed / escalate)
+  workspace.ts             clone (github or local) + branch + diff + test-cmd detect
+  pipeline.ts              the orchestration loop
+src/github/
+  auth.ts                  GitHub App -> installation token (PAT fallback)
+  pr.ts                    Octokit PR open (fast-approve vs flagged body)
 ```

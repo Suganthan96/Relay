@@ -7,7 +7,8 @@ function required(name: string): string {
 }
 
 function optional(name: string, fallback = ""): string {
-  return process.env[name] ?? fallback;
+  const v = process.env[name];
+  return v && v.trim() !== "" ? v : fallback;
 }
 
 export const config = {
@@ -15,12 +16,26 @@ export const config = {
   supabaseServiceKey: () => required("SUPABASE_SERVICE_ROLE_KEY"),
   supabaseAnonKey: () => optional("SUPABASE_ANON_KEY"),
 
-  anthropicApiKey: () => required("ANTHROPIC_API_KEY"),
   claudeCliPath: () => optional("CLAUDE_CLI_PATH", "claude"),
 
-  githubToken: () => required("GITHUB_TOKEN"),
-  githubRepo: () => required("GITHUB_REPO"),
-  githubWebhookSecret: () => optional("GITHUB_WEBHOOK_SECRET"),
+  // --- GitHub ---
+  // Preferred: a GitHub App (per-installation tokens; repo comes from the webhook).
+  githubAppId: () => required("GITHUB_APP_ID"),
+  githubPrivateKeyPath: () => required("GITHUB_PRIVATE_KEY_PATH"),
+  githubWebhookSecret: () => required("GITHUB_WEBHOOK_SECRET"),
+  hasGithubApp: () =>
+    Boolean(optional("GITHUB_APP_ID") && optional("GITHUB_PRIVATE_KEY_PATH")),
+
+  // Fallback: a personal access token + a fixed repo (used by the manual CLI).
+  optionalGithubToken: () => optional("GITHUB_TOKEN"),
+  optionalGithubRepo: () => optional("GITHUB_REPO"),
+
+  /** can the pipeline actually open a PR (vs. stop at a decision packet)? */
+  hasGithub: () =>
+    Boolean(
+      (optional("GITHUB_APP_ID") && optional("GITHUB_PRIVATE_KEY_PATH")) ||
+        (optional("GITHUB_TOKEN") && optional("GITHUB_REPO")),
+    ),
 
   agentKeysPath: () => optional("AGENT_KEYS_PATH", "./.keys/agents.json"),
   workspaceDir: () => optional("WORKSPACE_DIR", "./.workspace"),
