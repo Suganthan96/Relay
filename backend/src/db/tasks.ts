@@ -1,4 +1,5 @@
 import { db } from "./client.js";
+import { config } from "../config.js";
 import type { TaskRow, TaskStatus, PrMode } from "./types.js";
 
 export interface CreateTaskInput {
@@ -6,6 +7,7 @@ export interface CreateTaskInput {
   issueTitle: string;
   issueBody?: string;
   repo: string;
+  orgSlug?: string;
 }
 
 export async function createTask(input: CreateTaskInput): Promise<TaskRow> {
@@ -17,6 +19,7 @@ export async function createTask(input: CreateTaskInput): Promise<TaskRow> {
       issue_body: input.issueBody ?? null,
       repo: input.repo,
       status: "open",
+      org_slug: input.orgSlug ?? config.orgSlug(),
     })
     .select()
     .single();

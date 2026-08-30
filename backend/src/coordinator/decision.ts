@@ -30,6 +30,7 @@ export async function applyDecision(input: DecisionInput): Promise<DecisionResul
   const agents = await loadAgents();
   const keys = await loadAgentKeys(config.agentKeysPath());
   const approve = input.decision === "approve";
+  const org = (task as { org_slug?: string }).org_slug ?? config.orgSlug();
 
   const { data: review } = await db()
     .from("task_attempts")
@@ -104,6 +105,7 @@ export async function applyDecision(input: DecisionInput): Promise<DecisionResul
       p_agent: agentId,
       p_task_type: task.task_type,
       p_success: approve,
+      p_org: org,
     });
   }
 

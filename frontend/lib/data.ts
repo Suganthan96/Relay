@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { supabase } from "./supabase";
+import { supabase, RELAY_ORG } from "./supabase";
 import type { AgentRow, AttemptRow, ReputationRow, TaskRow } from "./types";
 
 export interface RelayData {
@@ -30,9 +30,9 @@ export function useRelayData(): RelayData {
   const load = useCallback(async () => {
     const [a, t, at, r] = await Promise.all([
       supabase.from("agents").select("*"),
-      supabase.from("tasks").select("*").order("created_at", { ascending: false }),
-      supabase.from("task_attempts").select("*").order("created_at"),
-      supabase.from("reputation_scores").select("*"),
+      supabase.from("tasks").select("*").eq("org_slug", RELAY_ORG).order("created_at", { ascending: false }),
+      supabase.from("task_attempts").select("*").eq("org_slug", RELAY_ORG).order("created_at"),
+      supabase.from("reputation_scores").select("*").eq("org_slug", RELAY_ORG),
     ]);
     const err = a.error || t.error || at.error || r.error;
     if (err) {

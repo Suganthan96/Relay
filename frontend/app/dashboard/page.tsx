@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Shell } from "@/components/dashboard/Shell";
 import { useRelayData } from "@/lib/data";
+import { supabase, RELAY_ORG } from "@/lib/supabase";
 import { verifyAttempt } from "@/lib/verify";
 import { OUTCOME_COLOR, relativeTime } from "@/lib/ui";
 import { STEP_LABEL } from "@/lib/types";
@@ -11,8 +13,26 @@ import styles from "./dashboard.module.css";
 const ACTIVE = new Set(["planning", "coding", "testing", "reviewing"]);
 const PENDING = new Set(["reviewing", "pr_opened", "escalated"]);
 
+interface PolicyRow {
+  repo: string;
+  trust_threshold: number;
+  min_history: number;
+  auto_approve_task_types: string[];
+  always_flag_task_types: string[];
+}
+
 export default function OverviewPage() {
   const { tasks, attempts, agents, loading, error } = useRelayData();
+  const [policy, setPolicy] = useState<PolicyRow | null>(null);
+
+  useEffect(() => {
+    supabase
+      .from("relay_policies")
+      .select("repo,trust_threshold,min_history,auto_approve_task_types,always_flag_task_types")
+      .eq("repo", "*")
+      .maybeSingle()
+      .then(({ data }) => setPolicy(data as PolicyRow | null));
+  }, []);
 
   const active = tasks.filter((t) => ACTIVE.has(t.status)).length;
   const pending = tasks.filter((t) => PENDING.has(t.status) || t.pr_mode).length;
@@ -61,12 +81,28 @@ export default function OverviewPage() {
           })}
         </div>
 
-        <div className={styles.panel}>
-          <h2 className={styles.panelTitle}>Jump in</h2>
-          <QuickLink href="/graph" title="Live trust graph" desc="Watch nodes appear as the pipeline runs" />
-          <QuickLink href="/tasks" title="Issue pipeline" desc="Per-issue: plan → diff → tests → decision" />
-          <QuickLink href="/approvals" title="Human review queue" desc="Approve / reject — the final call" />
-          <QuickLink href="/agents" title="Agent identities" desc="DIDs, reputation, signature demo" />
+        <div>
+          <div className={styles.panel} style={{ marginBottom: 20 }}>
+            <h2 className={styles.panelTitle}>Active trust policy · org {RELAY_ORG}</h2>
+            {policy ? (
+              <>
+                <div className={styles.stat}><span>Fast-approve threshold</span><span className={styles.statVal}>{policy.trust_threshold}</span></div>
+                <div className={styles.stat}><span>Min verified history</span><span className={styles.statVal}>{policy.min_history}</span></div>
+                <div className={styles.stat}><span>Fast-approve types</span><span className={styles.statVal} style={{ color: "#0175ff" }}>{policy.auto_approve_task_types.join(", ") || "—"}</span></div>
+                <div className={styles.stat}><span>Always flag</span><span className={styles.statVal} style={{ color: "#ffac0a" }}>{policy.always_flag_task_types.join(", ") || "—"}</span></div>
+              </>
+            ) : (
+              <div className={styles.empty}>Loading…</div>
+            )}
+          </div>
+
+          <div className={styles.panel}>
+            <h2 className={styles.panelTitle}>Jump in</h2>
+            <QuickLink href="/graph" title="Live trust graph" desc="Watch nodes appear as the pipeline runs" />
+            <QuickLink href="/tasks" title="Issue pipeline" desc="Per-issue: plan → diff → tests → decision" />
+            <QuickLink href="/approvals" title="Human review queue" desc="Approve / reject — the final call" />
+            <QuickLink href="/agents" title="Agent identities" desc="DIDs, reputation, signature demo" />
+          </div>
         </div>
       </div>
     </Shell>

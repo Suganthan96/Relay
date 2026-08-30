@@ -40,4 +40,20 @@ export const config = {
   agentKeysPath: () => optional("AGENT_KEYS_PATH", "./.keys/agents.json"),
   workspaceDir: () => optional("WORKSPACE_DIR", "./.workspace"),
   port: () => Number(optional("PORT", "8787")),
+
+  // --- multi-org (md 6·6) ---
+  /** org every task this instance creates belongs to */
+  orgSlug: () => optional("RELAY_ORG", "default"),
+  /** when true, dashboard reads are expected to carry an x-relay-org header */
+  enforceOrg: () => optional("RELAY_ENFORCE_ORG") === "true",
+
+  // --- sandbox (md 6·2) ---
+  /** 'local' (clone on this host) or 'docker' (throwaway --network none container) */
+  sandbox: () => optional("SANDBOX", "local") as "local" | "docker",
+  sandboxImage: () => optional("SANDBOX_IMAGE", "relay-sandbox:latest"),
+
+  // --- escalation notifications (md 6·5) ---
+  slackWebhookUrl: () => optional("SLACK_WEBHOOK_URL"),
+  notifyWebhookUrl: () => optional("RELAY_NOTIFY_WEBHOOK"),
+  dashboardUrl: () => optional("RELAY_DASHBOARD_URL", "http://localhost:3000"),
 };

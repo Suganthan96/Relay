@@ -7,6 +7,9 @@ import { recordAttempt } from "../db/attempts.js";
 import { loadAgentKeys } from "../identity/keys.js";
 import type { TaskAttemptRow } from "../db/types.js";
 import { getReputation, evaluateGate } from "./reputation.js";
+import { loadPolicy, touchesSensitivePath } from "./policy.js";
+import { notifyEscalation } from "./notify.js";
+import { sandboxAvailable } from "./sandbox.js";
 import {
   prepareWorkspace,
   diffStat,
@@ -54,7 +57,16 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
   let task = await getTask(taskId);
   if (!task.repo) throw new Error(`task ${taskId} has no repo`);
   const repo = task.repo;
+  const org = (task as { org_slug?: string }).org_slug ?? config.orgSlug();
+  const policy = await loadPolicy(repo, org);
   const token = await resolveGithubToken(opts.installationId, repo);
+  log(taskId, `policy: threshold ${policy.trustThreshold}, minHistory ${policy.minHistory}, org ${org}`);
+
+  if (config.sandbox() === "docker" && !(await sandboxAvailable())) {
+    log(taskId, "⚠️ SANDBOX=docker but the Docker daemon is unreachable — test runs fall back to the host");
+  } else {
+    log(taskId, `sandbox: ${config.sandbox()}`);
+  }
 
   // ---- PLAN -------------------------------------------------------------
   await patchTask(taskId, { status: "planning" });
@@ -83,11 +95,13 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
     await patchTask(taskId, { status: "failed" });
     return { taskId, status: "failed" };
   }
-  const sensitiveArea = Boolean((plan.detail as any).sensitiveArea);
+  const plannerSaysSensitive = Boolean((plan.detail as any).sensitiveArea);
+  const sensitiveByPath = touchesSensitivePath(plan.allowedPaths, policy);
+  const sensitiveArea = plannerSaysSensitive || sensitiveByPath.length > 0;
 
   // ---- REPUTATION GATE (Planner -> Coder) ------------------------------
-  const coderRepBefore = await getReputation(agents.coder.id, plan.taskType);
-  const gate = evaluateGate({ reputation: coderRepBefore, sensitiveArea });
+  const coderRepBefore = await getReputation(agents.coder.id, plan.taskType, org);
+  const gate = evaluateGate({ reputation: coderRepBefore, sensitiveArea, taskType: plan.taskType, policy });
   log(taskId, `gate: ${gate.proceed ? "proceed" : "ESCALATE"} — ${gate.reason}`);
 
   // ---- CODE -----------------------------------------------------------
@@ -188,13 +202,13 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
       .from("task_attempts")
       .update({ verified_by: "tests" })
       .in("id", [planAttempt.id, codeAttempt.id]);
-    await db().rpc("recompute_reputation", { p_agent: agents.coder.id, p_task_type: plan.taskType });
-    await db().rpc("recompute_reputation", { p_agent: agents.planner.id, p_task_type: plan.taskType });
+    await db().rpc("recompute_reputation", { p_agent: agents.coder.id, p_task_type: plan.taskType, p_org: org });
+    await db().rpc("recompute_reputation", { p_agent: agents.planner.id, p_task_type: plan.taskType, p_org: org });
 
     // ---- REVIEW ---------------------------------------------------
     await patchTask(taskId, { status: "reviewing" });
     const { files, stat, patch } = await diffStat(ws.dir);
-    const coderRepAfter = await getReputation(agents.coder.id, plan.taskType);
+    const coderRepAfter = await getReputation(agents.coder.id, plan.taskType, org);
     log(taskId, "reviewing");
     const review = await runReviewer({
       issueTitle: task.issue_title ?? "",
@@ -262,6 +276,23 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
 
     await patchTask(taskId, { status: "pr_opened", pr_number: pr.number, pr_url: pr.url });
     log(taskId, `PR #${pr.number} opened (${prMode}) ${pr.url}`);
+
+    // Escalations reach humans where they work (md 6·5)
+    void notifyEscalation({
+      taskId,
+      repo,
+      issueTitle: task.issue_title ?? "Relay fix",
+      issueNumber: task.issue_number,
+      taskType: plan.taskType,
+      prMode,
+      prUrl: pr.url,
+      prNumber: pr.number,
+      reviewerSummary: review.summary,
+      concerns,
+      coderReputation: coderRepAfter.score,
+      testsPassed: test.passed,
+    });
+
     await ws.cleanup();
     return { taskId, status: "pr_opened", prMode, prUrl: pr.url };
   } catch (err) {

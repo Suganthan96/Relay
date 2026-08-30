@@ -11,8 +11,10 @@
     "db:push": "tsx src/db/push.ts",
     "db:migrate": "supabase db push",
     "db:verify": "tsx src/db/verify-e2e.ts",
+    "db:apply": "node scripts/apply-migration.mjs",
     "pipeline": "tsx src/index.ts",
     "demo:sign": "tsx src/identity/demo.ts",
+    "sandbox:build": "docker build -t relay-sandbox:latest sandbox",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

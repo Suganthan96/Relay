@@ -12,7 +12,7 @@ import {
   useEdgesState,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { supabase } from "@/lib/supabase";
+import { supabase, RELAY_ORG } from "@/lib/supabase";
 import { verifyAttempt } from "@/lib/verify";
 import type { AgentRow, AttemptRow, ReputationRow, TaskRow, Outcome } from "@/lib/types";
 import { STEP_INDEX } from "@/lib/types";
@@ -49,9 +49,9 @@ export function TrustGraph() {
   const load = useCallback(async () => {
     const [a, t, at, r] = await Promise.all([
       supabase.from("agents").select("*"),
-      supabase.from("tasks").select("*").order("created_at", { ascending: false }),
-      supabase.from("task_attempts").select("*").order("created_at"),
-      supabase.from("reputation_scores").select("*"),
+      supabase.from("tasks").select("*").eq("org_slug", RELAY_ORG).order("created_at", { ascending: false }),
+      supabase.from("task_attempts").select("*").eq("org_slug", RELAY_ORG).order("created_at"),
+      supabase.from("reputation_scores").select("*").eq("org_slug", RELAY_ORG),
     ]);
     const err = a.error || t.error || at.error || r.error;
     if (err) { setError(err.message); return; }

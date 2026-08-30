@@ -1,5 +1,6 @@
 import { db } from "../db/client.js";
 import type { ReputationRow } from "../db/types.js";
+import type { Policy } from "./policy.js";
 
 /**
  * Reputation is scoped per (agent, task_type) — never one blanket number (md 5).
@@ -14,12 +15,17 @@ export interface Reputation {
 
 export const NO_HISTORY: Reputation = { score: 0, successCount: 0, totalCount: 0, hasHistory: false };
 
-export async function getReputation(agentId: string, taskType: string): Promise<Reputation> {
+export async function getReputation(
+  agentId: string,
+  taskType: string,
+  orgSlug = "default",
+): Promise<Reputation> {
   const { data, error } = await db()
     .from("reputation_scores")
     .select("*")
     .eq("agent_id", agentId)
     .eq("task_type", taskType)
+    .eq("org_slug", orgSlug)
     .maybeSingle();
   if (error) throw new Error(`getReputation failed: ${error.message}`);
   if (!data) return NO_HISTORY;
@@ -35,10 +41,8 @@ export async function getReputation(agentId: string, taskType: string): Promise<
 export interface GateInput {
   reputation: Reputation;
   sensitiveArea: boolean;
-  /** minimum verified attempts before trust can be considered "earned" */
-  minHistory?: number;
-  /** score at/above which a proven agent is trusted to proceed unflagged */
-  trustThreshold?: number;
+  taskType: string;
+  policy: Policy;
 }
 
 export interface GateDecision {
@@ -47,15 +51,17 @@ export interface GateDecision {
 }
 
 /**
- * The proceed/escalate gate that sits between Planner and Coder (md 3).
- * Relay never blocks the work outright — "escalate" means the eventual PR is
- * opened as a flagged review rather than a fast-approve.
+ * The proceed/escalate gate that sits between Planner and Coder (md 3), now
+ * driven by the team's trust policy (md 6·3). Relay never blocks the work —
+ * "escalate" just means the PR opens as a flagged review, not a fast-approve.
  */
 export function evaluateGate(input: GateInput): GateDecision {
-  const { reputation: rep, sensitiveArea } = input;
-  const minHistory = input.minHistory ?? 3;
-  const trustThreshold = input.trustThreshold ?? 0.8;
+  const { reputation: rep, sensitiveArea, taskType, policy } = input;
+  const { minHistory, trustThreshold } = policy;
 
+  if (policy.alwaysFlagTaskTypes.includes(taskType)) {
+    return { proceed: false, reason: `policy: "${taskType}" always goes to flagged review` };
+  }
   if (sensitiveArea && !(rep.hasHistory && rep.totalCount >= minHistory && rep.score >= trustThreshold)) {
     return { proceed: false, reason: "sensitive area with no proven track record" };
   }
@@ -66,7 +72,10 @@ export function evaluateGate(input: GateInput): GateDecision {
     return { proceed: false, reason: `only ${rep.totalCount} prior verified attempt(s) (< ${minHistory})` };
   }
   if (rep.score < trustThreshold) {
-    return { proceed: false, reason: `reputation ${rep.score.toFixed(2)} below trust threshold ${trustThreshold}` };
+    return { proceed: false, reason: `trust ${rep.score.toFixed(2)} below policy threshold ${trustThreshold}` };
   }
-  return { proceed: true, reason: `reputation ${rep.score.toFixed(2)} over ${rep.totalCount} verified attempts` };
+  if (policy.autoApproveTaskTypes.length && !policy.autoApproveTaskTypes.includes(taskType)) {
+    return { proceed: false, reason: `policy: "${taskType}" is not in the fast-approve list` };
+  }
+  return { proceed: true, reason: `trust ${rep.score.toFixed(2)} over ${rep.totalCount} verified attempts (policy allows)` };
 }

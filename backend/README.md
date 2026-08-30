@@ -17,7 +17,13 @@ The trust + orchestration layer from `relay-project-description.md`. Node 22 + T
 | §3 | Reputation gate (`src/coordinator/reputation.ts`) | ✅ per `(agent, task_type)`; escalates on no/low history or sensitive area |
 | §3 | Octokit PR (`src/github/pr.ts`) | ✅ fast-approve / flagged PR via a GitHub App installation token; else stops at a signed decision packet |
 | §3 | GitHub issue ingestion — App webhook (`src/server.ts`) | ✅ `issues.opened` → `createTask` → detached `runPipeline` |
-| §5 | Dashboard trust graph (`../frontend/app/dashboard`) | ✅ live React Flow graph, in-browser signature verify, tamper button |
+| §3 | Human decision API (`POST /api/decision`) | ✅ signed `human_override` → squash-merge PR → close/label issue → `apply_human_signal` |
+| §5 | Trust score (`relay_trust_score`) | ✅ `(tests_ok + 3·approvals + 1) / (tests_total + 3·(approvals+rejections) + 2)` — human merge weighted 3× |
+| §5 | Dashboard (`../frontend`) | ✅ `/dashboard` `/graph` `/tasks` `/approvals` `/agents` — live graph, in-browser verify, tamper, real approve/merge |
+| §6·2 | Sandboxed test runs (`src/coordinator/sandbox.ts`) | ✅ `SANDBOX=docker` → `docker run --rm --network none`; `npm run sandbox:build` |
+| §6·3 | Per-team trust policy (`relay_policies`, `src/coordinator/policy.ts`) | ✅ per-repo `trust_threshold` / `min_history` / `sensitive_paths` / auto-approve + always-flag task types |
+| §6·5 | Slack / webhook escalations (`src/coordinator/notify.ts`) | ✅ `SLACK_WEBHOOK_URL` + `RELAY_NOTIFY_WEBHOOK` (no-op if unset) |
+| §6·6 | Multi-org isolation (`org_slug`, `relay_current_org()`) | ✅ every row carries `org_slug`; `supabase/enforce-org.sql` flips on RLS isolation |
 
 ## Setup
 

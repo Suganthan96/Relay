@@ -67,6 +67,7 @@ export async function recordAttempt(input: RecordAttemptInput): Promise<TaskAtte
       signature,
       verified_by: verifiedBy,
       detail: input.detail ?? null,
+      org_slug: (input.task as { org_slug?: string }).org_slug ?? "default",
     })
     .select()
     .single();

@@ -3,6 +3,7 @@ import { promisify } from "node:util";
 import { mkdir, rm, readFile, access } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { config } from "../config.js";
+import { runInSandbox } from "./sandbox.js";
 
 const exec = promisify(execFile);
 
@@ -99,31 +100,16 @@ export interface TestRun {
 const FAILURE_RE = /\b(FAIL|FAILED|failing|not ok|AssertionError|Error:|✕|✗|✘)\b/i;
 
 /**
- * Run the project's test command directly (no agent) and capture the result.
- * Used to take a BASELINE on the pristine clone before the Coder touches
- * anything, so the Tester can tell a regression from a pre-existing failure.
+ * Run the project's test command and capture the result. Goes through the
+ * sandbox (md 6·2): SANDBOX=docker runs it in a throwaway `--network none`
+ * container so the repo's own scripts (postinstall, test) can't touch the host.
+ * Used for the BASELINE (pristine clone) and the authoritative after-run.
  */
 export async function runTestCommand(dir: string, command: string): Promise<TestRun> {
-  const [bin, ...args] = command.split(" ");
-  try {
-    const { stdout, stderr } = await exec(bin, args, {
-      cwd: dir,
-      maxBuffer: 20 * 1024 * 1024,
-      timeout: 300_000,
-      shell: process.platform === "win32",
-    });
-    const output = (stdout + stderr).trim();
-    return { passed: true, code: 0, output, failures: extractFailures(output) };
-  } catch (e) {
-    const err = e as { code?: number; stdout?: string; stderr?: string; message?: string };
-    const output = ((err.stdout ?? "") + (err.stderr ?? "") + (err.message ?? "")).trim();
-    return {
-      passed: false,
-      code: typeof err.code === "number" ? err.code : null,
-      output,
-      failures: extractFailures(output),
-    };
-  }
+  const r = await runInSandbox({ dir, command, network: true, timeoutMs: 300_000 });
+  const output = (r.stdout + r.stderr).trim();
+  const passed = r.code === 0;
+  return { passed, code: r.code, output, failures: extractFailures(output) };
 }
 
 function extractFailures(output: string): string[] {
