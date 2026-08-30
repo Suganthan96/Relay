@@ -64,6 +64,18 @@ export default function Nav() {
                       </div>
                     </a>
                   </div>
+                  <div className="framer-1aui1a1-container" style={{opacity: "1"}}>
+                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="/pitch" tabIndex={0} style={{opacity: "1"}}>
+                      <div className="framer-1gsxzzc" data-framer-name="Label" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", transform: "none", opacity: "1"}}>
+                        <p className="framer-text framer-styles-preset-1p9z0bc" data-styles-preset="lW2kM2SoC" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
+                          Pitch
+                        </p>
+                      </div>
+                      <div className="framer-zhbp5c" data-framer-name="Underline Wrap" style={{opacity: "1"}}>
+                        <div className="framer-9lj699" data-framer-name="Line" style={{backgroundColor: "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", opacity: "1"}} />
+                      </div>
+                    </a>
+                  </div>
                 </nav>
                 <div className="framer-s9npw8" data-border="true" data-framer-name="Border" style={{"--border-bottom-width": "0.5px", "--border-color": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--border-left-width": "0.5px", "--border-right-width": "0.5px", "--border-style": "solid", "--border-top-width": "0.5px", backgroundColor: "var(--token-365216f8-7ee6-4f9f-94e0-ca7d584e4354, rgba(255, 254, 250, 0))", mask: "linear-gradient(160deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0) 69%, rgb(0, 0, 0) 100%)", borderRadius: "999px", opacity: "1"}} />
               </div>

@@ -1,0 +1,538 @@
+/* Relay pitch deck — fullscreen paged presentation. Every slide fits the
+   viewport: no scrolling, no scrollbars. Reuses the COSMOQ palette
+   (styles/framer.css tokens) the same way app/dashboard does. */
+
+.deck {
+  --bg: #000;
+  --panel: #0c0f16;
+  --panel-2: #06070a;
+  --text: #fff;
+  --muted: #9ba9c4;
+  --dim: #d1d4e3;
+  --border: #2f3950;
+  --border-faint: #ffffff1a;
+  --blue: #0175ff;
+  --amber: #ffac0a;
+  --amber-light: #ffcd7d;
+  --red: #ff2244;
+  --green: #24d68a;
+
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Inter Placeholder", system-ui, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- horizontal slide track ---------- */
+.track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.slide {
+  position: relative;
+  flex: none;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  align-content: center;
+  justify-items: stretch;
+  padding: clamp(64px, 9vh, 96px) clamp(28px, 4.5vw, 72px) clamp(84px, 12vh, 116px);
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: min(1240px, 93vw);
+  margin: 0 auto;
+  max-height: 100%;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+  gap: clamp(10px, 1.8vh, 22px);
+}
+
+/* reveal — plays when the slide becomes active */
+.wrap > * {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide.active .wrap > * { opacity: 1; transform: none; }
+.slide.active .wrap > *:nth-child(2) { transition-delay: 0.05s; }
+.slide.active .wrap > *:nth-child(3) { transition-delay: 0.1s; }
+.slide.active .wrap > *:nth-child(4) { transition-delay: 0.15s; }
+.slide.active .wrap > *:nth-child(5) { transition-delay: 0.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .track { transition: none; }
+  .wrap > * { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- shared type ---------- */
+.eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(10px, 1vw, 12px);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin: 0;
+}
+.eyebrow span { color: #5c6779; }
+
+.slideH {
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.7vw, 2.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  margin: 0;
+}
+.slideH em { color: var(--blue); font-style: normal; }
+
+.lede {
+  font-size: clamp(0.92rem, 1.3vw, 1.12rem);
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 74ch;
+  margin: 0;
+}
+
+/* ---------- 1 · title ---------- */
+.title { text-align: center; }
+.title .wrap {
+  justify-items: center;
+  gap: clamp(14px, 2.1vh, 26px);
+  position: relative;
+  z-index: 1;
+  max-width: min(1500px, 95vw);
+}
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: min(120vw, 1150px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  background:
+    radial-gradient(closest-side, rgba(1, 117, 255, 0.18), transparent 70%),
+    radial-gradient(closest-side, rgba(255, 172, 10, 0.1), transparent 60%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 0;
+}
+.brand {
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 600;
+  font-size: clamp(3.4rem, 13vw, 9.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  background: linear-gradient(180deg, #fff 30%, #9fb3d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+.sig {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(10px, 1vw, 12px);
+  color: #5c6779;
+  letter-spacing: 0.04em;
+  word-break: break-all;
+  max-width: 90vw;
+  margin: 0;
+}
+.sig b { color: var(--green); font-weight: 700; }
+.thesis {
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.9vw, 2.4rem);
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: min(62ch, 92vw);
+  margin: 0;
+}
+.thesis em { color: var(--blue); font-style: normal; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.chips span {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(10px, 1vw, 11.5px);
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel);
+}
+.chips span::before { content: "\25C6  "; color: var(--blue); }
+.ctaRow { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.track2 {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(10px, 1vw, 11.5px);
+  color: #5c6779;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+/* ---------- 2 · problem — three layers ---------- */
+.layers { display: grid; }
+.layer {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) 1fr;
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: start;
+  padding: clamp(0.6rem, 1.7vh, 1.35rem) 0;
+  border-top: 1px solid var(--border);
+}
+.layer:last-child { border-bottom: 1px solid var(--border); }
+.stat {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--red);
+}
+.statSub {
+  display: block;
+  margin-top: 6px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-weight: 500;
+  font-size: clamp(9px, 0.9vw, 10.5px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5c6779;
+}
+.layerBody p { margin: 0 0 6px; color: var(--text); line-height: 1.48; font-size: clamp(0.84rem, 1.05vw, 0.98rem); }
+.layerN {
+  float: left;
+  margin-right: 9px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--blue);
+}
+.cite {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-style: normal;
+  font-size: clamp(9.5px, 0.95vw, 11px);
+  color: #5c6779;
+}
+.kicker {
+  margin: 8px 0 0;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.98rem, 1.7vw, 1.35rem);
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  max-width: 62ch;
+}
+.kicker em { color: var(--amber); font-style: normal; }
+
+/* ---------- 3 · solution ---------- */
+.pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(10px, 1.4vw, 14px); }
+.pillar {
+  background: var(--panel);
+  border: 1px solid var(--border-faint);
+  border-radius: 14px;
+  padding: clamp(0.8rem, 1.7vw, 1.3rem);
+  box-shadow: inset -3px -2px 8px 0 rgba(255, 255, 255, 0.03);
+}
+.pillar h3 {
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.pillar h3 i { width: 7px; height: 7px; border-radius: 999px; flex: none; background: var(--blue); }
+.pillar:nth-child(2) h3 i { background: var(--green); }
+.pillar:nth-child(3) h3 i { background: var(--amber); }
+.pillar p { margin: 0; font-size: clamp(0.8rem, 1vw, 0.92rem); line-height: 1.48; color: var(--muted); }
+.pillar code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.82em;
+  color: var(--dim);
+  background: var(--panel-2);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+.ruleBand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: clamp(11px, 1.6vh, 16px) 18px;
+  background: rgba(1, 117, 255, 0.12);
+  border: 1px solid color-mix(in srgb, var(--blue) 40%, transparent);
+  border-radius: 13px;
+  font-size: clamp(0.85rem, 1.1vw, 0.98rem);
+  color: var(--muted);
+}
+.ruleBand b { font-family: "Inter Display", "Inter Display Placeholder", sans-serif; font-weight: 600; color: var(--text); }
+.ruleBand .lock { font-family: ui-monospace, Menlo, monospace; color: var(--blue); font-weight: 700; flex: none; }
+
+/* ---------- 4 · flow ---------- */
+.wrapWide { max-width: min(1840px, 97vw); }
+.flow.slide { padding: clamp(40px, 6vh, 64px) clamp(20px, 2.5vw, 48px) clamp(72px, 10vh, 100px); }
+.flow .slideH { font-size: clamp(1.35rem, 2.3vw, 2rem); }
+.figure { margin: 0; display: grid; justify-items: center; }
+.flowCard {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border-faint);
+  border-radius: 18px;
+  padding: clamp(0.8rem, 1.8vw, 1.4rem);
+  box-shadow: inset -3px -2px 8px 0 rgba(255, 255, 255, 0.03);
+  display: flex;
+  justify-content: center;
+}
+/* viewBox is 1180x434 (ratio 2.72). Cap by height on short screens, by width on
+   tall ones, so the diagram always fits with no scroll. */
+.flowCard svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: calc(78vh * 2.72);
+  max-height: 78vh;
+}
+
+/* ---------- 5 · comparison ---------- */
+.cmpScroll {
+  overflow: hidden;
+  border: 1px solid var(--border-faint);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: inset -3px -2px 8px 0 rgba(255, 255, 255, 0.03);
+}
+.cmp { width: 100%; border-collapse: collapse; font-size: clamp(0.74rem, 0.95vw, 0.88rem); }
+.cmp th, .cmp td {
+  padding: clamp(7px, 1vh, 12px) clamp(12px, 1.2vw, 18px);
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+}
+.cmp thead th {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-weight: 500;
+  font-size: clamp(9px, 0.9vw, 11px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid color-mix(in srgb, var(--blue) 30%, var(--border));
+}
+.cmp tbody th {
+  font-weight: 500;
+  color: var(--text);
+  font-size: clamp(0.74rem, 0.95vw, 0.88rem);
+  width: 34%;
+}
+.cmp tbody tr { transition: background 0.12s; }
+.cmp tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.014); }
+.cmp tbody tr:hover { background: rgba(1, 117, 255, 0.06); }
+.cmp tbody tr:last-child td, .cmp tbody tr:last-child th { border-bottom: 0; }
+
+.cell { white-space: nowrap; }
+.mark {
+  display: inline-block;
+  width: 1.5em;
+  font-size: 1.05em;
+  line-height: 1;
+  vertical-align: -0.08em;
+  filter: saturate(1.1);
+}
+.no .mark { opacity: 0.6; }
+.mid .mark { opacity: 0.9; }
+.lock .mark { opacity: 1; }
+.yes .mark { opacity: 1; }
+.cellNote {
+  color: var(--muted);
+  font-size: 0.92em;
+  white-space: normal;
+}
+.yes .cellNote { color: var(--dim); }
+
+.cmp .colRelay {
+  background: rgba(1, 117, 255, 0.13);
+  color: var(--text);
+  border-left: 1px solid color-mix(in srgb, var(--blue) 45%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--blue) 45%, transparent);
+}
+.cmp .colRelay .cellNote { color: #c6d8ff; }
+.cmp thead .colRelay { color: var(--blue); font-weight: 700; }
+.relayStar { color: var(--amber); font-size: 1.1em; }
+
+.vsNotes { display: grid; gap: 8px; }
+.vsNotes p {
+  margin: 0;
+  padding: clamp(8px, 1.1vh, 12px) 15px;
+  border: 1px solid var(--border-faint);
+  border-left: 3px solid var(--blue);
+  border-radius: 10px;
+  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  line-height: 1.48;
+  color: var(--muted);
+}
+.vsNotes b { color: var(--text); font-family: "Inter Display", "Inter Display Placeholder", sans-serif; font-weight: 600; }
+.vsNotes em { color: var(--dim); font-style: normal; }
+
+/* ---------- glassy buttons (match the site "Open Dashboard" primary) ---------- */
+.btnCosmoq {
+  border-radius: 14px;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0.83px 0.83px -0.75px rgba(0, 0, 0, 0.18),
+    0 2.26px 2.26px -1.5px rgba(0, 0, 0, 0.18),
+    0 4.96px 4.96px -2.25px rgba(0, 0, 0, 0.17),
+    0 11px 11px -3px rgba(0, 0, 0, 0.14),
+    0 28px 28px -3.75px rgba(0, 0, 0, 0.06),
+    inset -4px 3px 9px 0 var(--blue),
+    inset 3px -2px 8px 0 var(--amber-light);
+  transition: filter 0.15s;
+}
+.btnCosmoq:hover { filter: brightness(1.18); }
+.btnCosmoq:active { filter: brightness(0.95); }
+.btnGhost {
+  border-radius: 14px;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--dim);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--border);
+  transition: color 0.15s, border-color 0.15s;
+}
+.btnGhost:hover { color: var(--text); border-color: var(--muted); }
+
+/* ---------- presentation chrome ---------- */
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  z-index: 60;
+}
+.progress i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--amber-light));
+  transition: width 0.5s ease;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  z-index: 60;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+  background: rgba(12, 15, 22, 0.7);
+  border: 1px solid var(--border-faint);
+  transition: color 0.15s, border-color 0.15s;
+}
+.close:hover { color: var(--text); border-color: var(--muted); }
+
+.edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8vw;
+  max-width: 120px;
+  z-index: 55;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+.edgeL { left: 0; }
+.edgeR { right: 0; }
+
+.controls {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 9px;
+  background: rgba(12, 15, 22, 0.82);
+  border: 1px solid var(--border-faint);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.7);
+}
+.navBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+  line-height: 1;
+  font-family: inherit;
+  color: #fff;
+  cursor: pointer;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset -4px 3px 9px 0 var(--blue),
+    inset 3px -2px 8px 0 var(--amber-light);
+  transition: filter 0.15s;
+}
+.navBtn:hover:not(:disabled) { filter: brightness(1.2); }
+.navBtn:disabled { opacity: 0.32; cursor: default; box-shadow: none; }
+.count {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  min-width: 60px;
+  text-align: center;
+}
+.count span { color: #5c6779; }
+
+@media (max-width: 720px) {
+  .pillars { grid-template-columns: 1fr; }
+  .layer { grid-template-columns: 1fr; gap: 8px; }
+  .edge { display: none; }
+  .flowCard svg { max-width: 100%; max-height: none; }
+}
