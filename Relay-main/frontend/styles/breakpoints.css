@@ -1,0 +1,44 @@
+/* Framer breakpoint visibility rules — DELIBERATELY NOT APPLIED.
+ *
+ * Framer marks each breakpoint's copy of a component with `hidden-<hash>`,
+ * meaning "hide me while that breakpoint is active", and server-renders all
+ * three copies. This scrape was taken at desktop width, so it contains only the
+ * desktop copies — the tablet and phone markup was never rendered into the HTML.
+ *
+ * The markup still carries the `hidden-*` classes, so writing the matching rules
+ * is tempting. Doing it blanks the site: of the 15 slots that carry these
+ * classes, 11 have no surviving child once the rules apply — including the whole
+ * nav (.framer-dpe114-container) and the whole footer (.framer-n7nl4n-container),
+ * both of which collapse to 0x0 below 1200px.
+ *
+ * So the rules stay off. Below 1200px the desktop markup renders, resized by the
+ * responsive rules that *are* present in framer.css (@media (max-width:809px) and
+ * @media (max-width:1199px), 36 rules covering the page body). That is a desktop
+ * layout squeezed down, not the real tablet/phone design.
+ *
+ * To get the true responsive design, re-scrape the page at ~900px and ~390px so
+ * the tablet and phone component copies are present, then uncomment the block
+ * below. The hash -> media query mapping is copied verbatim from the
+ * `__framer__breakpoints` payload in js/inline_scripts.js:
+ *
+ *   ogaiyu, 13xxj9k -> (min-width: 1200px)
+ *   1pkxm8v, 1827i6x -> (min-width: 810px) and (max-width: 1199.98px)
+ *   zmbq2w,  9a9x5i  -> (max-width: 809.98px)
+ */
+
+/*
+@media (min-width: 1200px) {
+  .hidden-ogaiyu,
+  .hidden-13xxj9k { display: none !important; }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .hidden-1pkxm8v,
+  .hidden-1827i6x { display: none !important; }
+}
+
+@media (max-width: 809.98px) {
+  .hidden-zmbq2w,
+  .hidden-9a9x5i { display: none !important; }
+}
+*/
