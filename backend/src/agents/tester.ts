@@ -1,22 +1,35 @@
 import { runClaude } from "./claude.js";
 import type { TesterInput, TesterResult } from "./types.js";
+import type { TestRun } from "../coordinator/workspace.js";
 
 /**
  * Tester (md 3): headless Claude Code scoped to running the test suite only —
- * no file-write access. Reports pass/fail.
+ * no file-write access. It installs deps if needed and narrates what it saw.
+ * The pipeline is the arbiter of pass/fail: it compares this run against a
+ * BASELINE taken before the Coder's change, so a pre-existing unrelated failure
+ * is not blamed on this task — only a regression is.
  */
-export async function runTester(input: TesterInput): Promise<TesterResult> {
+export async function runTester(input: TesterInput & { baseline?: TestRun }): Promise<TesterResult> {
+  const baselineNote = input.baseline
+    ? input.baseline.passed
+      ? "Before this change the suite was GREEN, so any failure now is a regression."
+      : `Before this change the suite ALREADY had ${input.baseline.failures.length} failure(s):\n` +
+        input.baseline.failures.map((f) => `  - ${f}`).join("\n") +
+        "\nThose are pre-existing and NOT this change's fault — only NEW failures matter."
+    : "";
+
   const prompt = [
     "You are the TESTER in an autonomous bug-fix pipeline.",
     `Run the project's test suite with: ${input.testCommand}`,
-    "Do not edit any files. If dependencies are missing, you may install them",
-    "with the project's package manager, then run the tests.",
+    "Do not edit any files. If dependencies are missing, install them with the",
+    "project's package manager, then run the tests.",
+    baselineNote,
     "",
-    "End your reply with exactly one line:",
-    "  RESULT: PASS  — if the suite ran and every test passed",
-    "  RESULT: FAIL  — if any test failed or the suite could not run",
-    "Precede it with a 2-3 sentence summary (counts, notable failures).",
-  ].join("\n");
+    "Summarise in 2-3 sentences: how many tests passed/failed, whether any",
+    "failure is NEW versus pre-existing, and whether the issue's fix is exercised",
+    "by a test. End with exactly one line: RESULT: PASS or RESULT: FAIL",
+    "(PASS = no NEW failures were introduced).",
+  ].filter(Boolean).join("\n");
 
   const res = await runClaude({
     prompt,

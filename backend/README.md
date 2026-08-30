@@ -13,10 +13,11 @@ The trust + orchestration layer from `relay-project-description.md`. Node 22 + T
 | §4 | Signed `task_attempts` writer (`src/db/attempts.ts`) | ✅ **verified end-to-end** (`npm run db:verify`) against the live DB |
 | §3 | Coordinator + pipeline (`src/coordinator/pipeline.ts`) | ✅ runs end-to-end (`npm run pipeline`) |
 | §3 | Planner / Coder / Tester / Reviewer agents | ✅ all four are real headless `claude -p` runs (no API key) |
+| §3 | Tester = baseline diff | ✅ suite is run on the pristine clone first; only a **new** failure (regression) fails the task — pre-existing unrelated failures don't |
 | §3 | Reputation gate (`src/coordinator/reputation.ts`) | ✅ per `(agent, task_type)`; escalates on no/low history or sensitive area |
 | §3 | Octokit PR (`src/github/pr.ts`) | ✅ fast-approve / flagged PR via a GitHub App installation token; else stops at a signed decision packet |
 | §3 | GitHub issue ingestion — App webhook (`src/server.ts`) | ✅ `issues.opened` → `createTask` → detached `runPipeline` |
-| §5 | Dashboard trust graph | ⏳ (in `../frontend`) |
+| §5 | Dashboard trust graph (`../frontend/app/dashboard`) | ✅ live React Flow graph, in-browser signature verify, tamper button |
 
 ## Setup
 
@@ -61,8 +62,9 @@ opening a PR (fast-approve or flagged) with an installation token. Set
 
 ```bash
 npm run pipeline -- issue "<title>" --body "<details>" --repo owner/name
-#   --repo also accepts a local path or file:// URL (for testing)
-#   with no GitHub App and no GITHUB_TOKEN, the run stops at a signed decision packet
+#   --repo owner/name  -> real clone + real PR (App installation token is resolved
+#                         from the repo owner, so the CLI works without a webhook)
+#   --repo <local path> -> local clone, stops at a signed decision packet (no PR)
 npm run pipeline -- run <taskId>
 ```
 

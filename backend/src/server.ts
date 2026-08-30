@@ -5,6 +5,7 @@ import { config } from "./config.js";
 import { githubApp } from "./github/auth.js";
 import { createTask } from "./db/tasks.js";
 import { runPipeline } from "./coordinator/pipeline.js";
+import { applyDecision } from "./coordinator/decision.js";
 
 /**
  * GitHub App webhook receiver (md 3: "Webhook / Poller → creates task record").
@@ -55,7 +56,38 @@ app.webhooks.onError((e) => console.error("webhook error:", e.message));
 
 const server = express();
 server.get("/health", (_req, res) => res.json({ ok: true }));
+
+// webhook middleware needs the raw body — mount it before express.json()
 server.use(createNodeMiddleware(app.webhooks, { path: "/webhook" }));
 
+// CORS for the dashboard (local demo — allow any origin)
+server.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") return res.sendStatus(204);
+  next();
+});
+server.use(express.json());
+
+/**
+ * Human review action from the Approvals page (md 3). Body:
+ *   { taskId, decision: "approve" | "reject", note?, installationId? }
+ */
+server.post("/api/decision", async (req, res) => {
+  const { taskId, decision, note, installationId } = req.body ?? {};
+  if (!taskId || (decision !== "approve" && decision !== "reject")) {
+    return res.status(400).json({ error: "taskId and decision (approve|reject) required" });
+  }
+  try {
+    const result = await applyDecision({ taskId, decision, note, installationId });
+    console.log(`decision ${decision} on ${taskId} -> ${result.status}${result.merged ? " (merged)" : ""}`);
+    res.json(result);
+  } catch (e) {
+    console.error("decision failed:", e);
+    res.status(500).json({ error: (e as Error).message });
+  }
+});
+
 const port = config.port();
-server.listen(port, () => console.log(`Relay webhook listening on :${port}/webhook`));
+server.listen(port, () => console.log(`Relay webhook + API listening on :${port}`));

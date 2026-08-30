@@ -74,20 +74,38 @@ export async function openPr(input: OpenPrInput): Promise<OpenPrResult> {
     input.baseBranch ??
     (await octokit.repos.get({ owner, repo: name })).data.default_branch;
 
+  // Not opened as a draft even when flagged: the "flag" is carried by the PR
+  // body header + label + the dashboard, and a draft PR cannot be merged via the
+  // API when the human clicks Approve.
   const pr = await octokit.pulls.create({
     owner,
     repo: name,
     head: input.branch,
     base,
-    title: input.title,
-    body: body(input),
-    draft: input.mode === "flagged_review",
+    title: input.mode === "flagged_review" ? `🚩 ${input.title}` : input.title,
+    body: body(input), // body contains `Closes #<issue>` -> issue auto-closes on merge
   });
 
   const label = input.mode === "fast_approve" ? "relay:fast-approve" : "relay:flagged-review";
+  // label + link-back on the PR *and* the issue
   await octokit.issues
     .addLabels({ owner, repo: name, issue_number: pr.data.number, labels: [label] })
-    .catch(() => {/* labels are best-effort */});
+    .catch(() => {});
+
+  if (input.issueNumber) {
+    const note =
+      input.mode === "fast_approve"
+        ? `🤖 Relay prepared a fix in #${pr.data.number} — tests pass, in scope. ` +
+          `A human clicks **Approve & merge** to ship it (Relay never merges on its own).`
+        : `🤖 Relay prepared a fix in #${pr.data.number} — flagged for review. ` +
+          `A human decides on the Approvals page.`;
+    await octokit.issues
+      .createComment({ owner, repo: name, issue_number: input.issueNumber, body: note })
+      .catch(() => {});
+    await octokit.issues
+      .addLabels({ owner, repo: name, issue_number: input.issueNumber, labels: ["relay:in-review"] })
+      .catch(() => {});
+  }
 
   return { number: pr.data.number, url: pr.data.html_url };
 }

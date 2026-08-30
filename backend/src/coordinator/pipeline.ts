@@ -7,7 +7,15 @@ import { recordAttempt } from "../db/attempts.js";
 import { loadAgentKeys } from "../identity/keys.js";
 import type { TaskAttemptRow } from "../db/types.js";
 import { getReputation, evaluateGate } from "./reputation.js";
-import { prepareWorkspace, diffStat, detectTestCommand, commitAll, pushBranch } from "./workspace.js";
+import {
+  prepareWorkspace,
+  diffStat,
+  detectTestCommand,
+  commitAll,
+  pushBranch,
+  runTestCommand,
+  hasRegression,
+} from "./workspace.js";
 import { runPlanner } from "../agents/planner.js";
 import { runCoder } from "../agents/coder.js";
 import { runTester } from "../agents/tester.js";
@@ -46,7 +54,7 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
   let task = await getTask(taskId);
   if (!task.repo) throw new Error(`task ${taskId} has no repo`);
   const repo = task.repo;
-  const token = await resolveGithubToken(opts.installationId);
+  const token = await resolveGithubToken(opts.installationId, repo);
 
   // ---- PLAN -------------------------------------------------------------
   await patchTask(taskId, { status: "planning" });
@@ -87,6 +95,12 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
   const ws = await prepareWorkspace(taskId, repo, token);
   let codeAttempt: TaskAttemptRow;
   try {
+    // Baseline: run the suite on the pristine clone BEFORE the Coder touches
+    // anything, so the Tester can tell a regression from a pre-existing failure.
+    const testCommand = (await detectTestCommand(ws.dir)) ?? "npm test";
+    const baseline = await runTestCommand(ws.dir, testCommand);
+    log(taskId, `baseline tests: ${baseline.passed ? "pass" : `fail (${baseline.failures.length} pre-existing)`}`);
+
     log(taskId, "coding");
     const code = await runCoder({
       plan: plan.plan,
@@ -119,9 +133,30 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
 
     // ---- TEST -------------------------------------------------------
     await patchTask(taskId, { status: "testing" });
-    const testCommand = (await detectTestCommand(ws.dir)) ?? "npm test";
     log(taskId, `testing (${testCommand})`);
-    const test = await runTester({ workdir: ws.dir, testCommand });
+    // Tester agent: may install deps, narrates what it saw.
+    const agentTest = await runTester({ workdir: ws.dir, testCommand, baseline });
+    // Authoritative after-state run (deps are installed now); compare to baseline.
+    const after = await runTestCommand(ws.dir, testCommand);
+    const regression = hasRegression(baseline, after);
+    const newFailures = after.failures.filter((f) => !baseline.failures.includes(f));
+    // A pre-existing, unrelated failure does not fail THIS task — only a regression does.
+    const testPassed = after.passed || !regression;
+    const testOutcome: "passed" | "failed" = testPassed ? "passed" : "failed";
+    log(
+      taskId,
+      `tests: after=${after.passed ? "pass" : "fail"} regression=${regression} -> ${testOutcome}`,
+    );
+
+    const test = {
+      passed: testPassed,
+      outcome: testOutcome,
+      summary: after.passed
+        ? "All tests pass."
+        : regression
+          ? `Regression — new failure(s): ${newFailures.join("; ")}`
+          : `Suite has ${baseline.failures.length} pre-existing failure(s) unrelated to this change; no new failures introduced.`,
+    };
 
     const testAttempt = await recordAttempt({
       task,
@@ -131,9 +166,18 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
       parentAttemptId: codeAttempt.id,
       scopeDeclared: plan.scopeDeclared,
       scopeAdhered: true,
-      outcome: test.outcome,
+      outcome: testOutcome,
       confidence: null,
-      detail: test.detail,
+      detail: {
+        summary: test.summary,
+        agentSummary: agentTest.summary,
+        baselinePassed: baseline.passed,
+        afterPassed: after.passed,
+        regression,
+        newFailures,
+        preExistingFailures: baseline.failures,
+        testCommand,
+      },
     });
 
     // The Planner's and Coder's work is verified downstream by the tester (md 5).

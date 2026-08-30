@@ -87,3 +87,61 @@ export async function detectTestCommand(dir: string): Promise<string | null> {
   }
   return null;
 }
+
+export interface TestRun {
+  passed: boolean;
+  code: number | null;
+  output: string;
+  /** normalized set of failure lines, for baseline-vs-after comparison */
+  failures: string[];
+}
+
+const FAILURE_RE = /\b(FAIL|FAILED|failing|not ok|AssertionError|Error:|✕|✗|✘)\b/i;
+
+/**
+ * Run the project's test command directly (no agent) and capture the result.
+ * Used to take a BASELINE on the pristine clone before the Coder touches
+ * anything, so the Tester can tell a regression from a pre-existing failure.
+ */
+export async function runTestCommand(dir: string, command: string): Promise<TestRun> {
+  const [bin, ...args] = command.split(" ");
+  try {
+    const { stdout, stderr } = await exec(bin, args, {
+      cwd: dir,
+      maxBuffer: 20 * 1024 * 1024,
+      timeout: 300_000,
+      shell: process.platform === "win32",
+    });
+    const output = (stdout + stderr).trim();
+    return { passed: true, code: 0, output, failures: extractFailures(output) };
+  } catch (e) {
+    const err = e as { code?: number; stdout?: string; stderr?: string; message?: string };
+    const output = ((err.stdout ?? "") + (err.stderr ?? "") + (err.message ?? "")).trim();
+    return {
+      passed: false,
+      code: typeof err.code === "number" ? err.code : null,
+      output,
+      failures: extractFailures(output),
+    };
+  }
+}
+
+function extractFailures(output: string): string[] {
+  return [
+    ...new Set(
+      output
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter((l) => l && FAILURE_RE.test(l))
+        .map((l) => l.replace(/\s+/g, " ").slice(0, 200)),
+    ),
+  ].sort();
+}
+
+/** true when `after` contains a failure line that was NOT present in `baseline`. */
+export function hasRegression(baseline: TestRun, after: TestRun): boolean {
+  if (after.passed) return false;
+  if (!baseline.passed && after.failures.length === 0) return true; // suite broke differently
+  const base = new Set(baseline.failures);
+  return after.failures.some((f) => !base.has(f));
+}

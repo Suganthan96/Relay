@@ -44,15 +44,36 @@ export async function installationToken(installationId: number): Promise<string>
   return auth.token;
 }
 
+/** Find the installation id that covers `owner/name`, so the CLI works too. */
+export async function installationIdForRepo(repo: string): Promise<number | null> {
+  const app = githubApp();
+  if (!app) return null;
+  const owner = repo.split("/")[0].toLowerCase();
+  const { data } = await app.octokit.request("GET /app/installations");
+  const byAccount = data.find((i) => (i.account as { login?: string } | null)?.login?.toLowerCase() === owner);
+  return (byAccount ?? data[0])?.id ?? null;
+}
+
 /**
  * Resolve a token usable for both git and the REST API, or null when GitHub is
  * not configured (the pipeline then stops at a signed decision packet).
+ *
+ * Priority: explicit installation id (from a webhook) → App installation that
+ * covers `repo` → PAT.
  */
-export async function resolveGithubToken(installationId?: number): Promise<string | null> {
-  if (installationId != null && config.hasGithubApp()) {
-    return installationToken(installationId);
+export async function resolveGithubToken(
+  installationId?: number,
+  repo?: string,
+): Promise<string | null> {
+  if (config.hasGithubApp()) {
+    const id = installationId ?? (repo && !isLocalRepo(repo) ? await installationIdForRepo(repo) : null);
+    if (id != null) return installationToken(id);
   }
   return config.optionalGithubToken() || null;
+}
+
+function isLocalRepo(repo: string): boolean {
+  return repo.startsWith("file:") || repo.startsWith(".") || repo.startsWith("/") || /^[a-zA-Z]:[\\/]/.test(repo);
 }
 
 export function octokitWithToken(token: string): Octokit {

@@ -17,10 +17,10 @@ export default function Nav() {
               <div className="framer-199y88y" data-framer-name="Links" style={{backdropFilter: "blur(8px)", borderRadius: "999px", boxShadow: "inset -3px -2px 8px 0px var(--token-5a7f2bca-ee8c-42c5-80e1-f72de38d4fdf, rgba(255, 255, 255, 0.07))", opacity: "1"}}>
                 <nav className="framer-48nfym" data-framer-name="Links" style={{opacity: "1"}}>
                   <div className="framer-ocqhot-container" style={{opacity: "1"}}>
-                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="./ai-solutions" tabIndex={0} style={{opacity: "1"}}>
+                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="/graph" tabIndex={0} style={{opacity: "1"}}>
                       <div className="framer-1gsxzzc" data-framer-name="Label" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1p9z0bc" data-styles-preset="lW2kM2SoC" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          AI Solutions
+                          Trust Graph
                         </p>
                       </div>
                       <div className="framer-zhbp5c" data-framer-name="Underline Wrap" style={{opacity: "1"}}>
@@ -29,10 +29,10 @@ export default function Nav() {
                     </a>
                   </div>
                   <div className="framer-1hxdou6-container" style={{opacity: "1"}}>
-                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="./about" tabIndex={0} style={{opacity: "1"}}>
+                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="/tasks" tabIndex={0} style={{opacity: "1"}}>
                       <div className="framer-1gsxzzc" data-framer-name="Label" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1p9z0bc" data-styles-preset="lW2kM2SoC" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          About
+                          Tasks
                         </p>
                       </div>
                       <div className="framer-zhbp5c" data-framer-name="Underline Wrap" style={{opacity: "1"}}>
@@ -41,10 +41,10 @@ export default function Nav() {
                     </a>
                   </div>
                   <div className="framer-9hdncu-container" style={{opacity: "1"}}>
-                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="./pricing" tabIndex={0} style={{opacity: "1"}}>
+                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="/approvals" tabIndex={0} style={{opacity: "1"}}>
                       <div className="framer-1gsxzzc" data-framer-name="Label" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1p9z0bc" data-styles-preset="lW2kM2SoC" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Pricing
+                          Approvals
                         </p>
                       </div>
                       <div className="framer-zhbp5c" data-framer-name="Underline Wrap" style={{opacity: "1"}}>
@@ -53,10 +53,10 @@ export default function Nav() {
                     </a>
                   </div>
                   <div className="framer-1aui1a1-container" style={{opacity: "1"}}>
-                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="./contact" tabIndex={0} style={{opacity: "1"}}>
+                    <a className="framer-ttQjC framer-QATJw framer-1vp0xhe framer-v-1vp0xhe framer-j6ho85" data-framer-name="Default" data-highlight="true" href="/agents" tabIndex={0} style={{opacity: "1"}}>
                       <div className="framer-1gsxzzc" data-framer-name="Label" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1p9z0bc" data-styles-preset="lW2kM2SoC" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Contact
+                          Agents
                         </p>
                       </div>
                       <div className="framer-zhbp5c" data-framer-name="Underline Wrap" style={{opacity: "1"}}>
@@ -69,11 +69,11 @@ export default function Nav() {
               </div>
               <div className="framer-1yzb3cd" data-framer-name="Other" style={{opacity: "1"}}>
                 <div className="framer-3a23p6-container" style={{opacity: "1"}}>
-                  <a className="framer-Yf5wR framer-ZHrhX framer-bqds1m framer-v-bqds1m framer-2xkq2k" data-framer-name="Primary" data-highlight="true" href="./pricing" tabIndex={0} style={{borderBottomLeftRadius: "16px", borderBottomRightRadius: "16px", borderTopLeftRadius: "16px", borderTopRightRadius: "16px", opacity: "1"}}>
+                  <a className="framer-Yf5wR framer-ZHrhX framer-bqds1m framer-v-bqds1m framer-2xkq2k" data-framer-name="Primary" data-highlight="true" href="/dashboard" tabIndex={0} style={{borderBottomLeftRadius: "16px", borderBottomRightRadius: "16px", borderTopLeftRadius: "16px", borderTopRightRadius: "16px", opacity: "1"}}>
                     <div className="framer-6yhlt6" data-border="true" data-framer-name="Label" style={{"--border-bottom-width": "1px", "--border-color": "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-74e333f8-fe87-4945-af87-cae5b7e16c10, rgb(0, 0, 0))", filter: "brightness(1)", borderRadius: "15px", boxShadow: "0px 0.829890004863264px 0.829890004863264px -0.75px rgba(0, 0, 0, 0.18), 0px 2.260010866989614px 2.260010866989614px -1.5px rgba(0, 0, 0, 0.18), 0px 4.96216589306132px 4.96216589306132px -2.25px rgba(0, 0, 0, 0.17), 0px 11.014875294190135px 11.014875294190135px -3px rgba(0, 0, 0, 0.14), 0px 28px 28px -3.75px rgba(0, 0, 0, 0.06), inset -4px 3px 9px 0px var(--token-991642a5-fe69-44f0-a456-0d249f695158, rgb(1, 117, 255)), inset 3px -2px 8px 0px var(--token-40eb5c15-2df6-4cc5-9a1c-8a90a74b480c, rgb(255, 205, 125))", opacity: "1"}}>
                       <div className="framer-3nflbn" data-framer-name="Get Started" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-79ayo0" data-styles-preset="AVSIklFkd" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Get Started
+                          Open Dashboard
                         </p>
                       </div>
                     </div>
