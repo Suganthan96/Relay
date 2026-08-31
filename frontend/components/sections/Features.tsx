@@ -29,13 +29,13 @@ export default function Features() {
               <div className="framer-xgkw1v" data-framer-name="Main">
                 <div className="framer-zpbxfy" data-framer-name="Alpha Range Technology" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <h2 className="framer-text framer-styles-preset-mnfyzd" data-styles-preset="muXEgmE57">
-                    All-in-one AI for enterprise
+                    One connected pipeline
                   </h2>
                 </div>
               </div>
               <div className="framer-41uz16" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                 <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))"}}>
-                  Simplify, accelerate, and transform with one connected AI ecosystem.
+                  Plan, code, test and review, coordinated by plain code, not another model.
                 </p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Features() {
                       </div>
                       <div className="framer-pdoe2b" data-framer-name="FEATURES" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Usage
+                          Agents
                         </p>
                       </div>
                     </div>
@@ -73,7 +73,7 @@ export default function Features() {
                       </div>
                       <div className="framer-pdoe2b" data-framer-name="FEATURES" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Technology
+                          Identity
                         </p>
                       </div>
                     </div>
@@ -90,7 +90,7 @@ export default function Features() {
                       </div>
                       <div className="framer-pdoe2b" data-framer-name="FEATURES" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Data
+                          Policy
                         </p>
                       </div>
                     </div>
@@ -107,12 +107,12 @@ export default function Features() {
                         <div className="framer-18rostv" data-framer-name="Title" style={{opacity: "1"}}>
                           <div className="framer-f2x98z" data-framer-name="Sign up and select Plan" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <h4 className="framer-text framer-styles-preset-1c78dmg" data-styles-preset="hVHiYTsnG">
-                              AI Agent for work
+                              Four agents, one job
                             </h4>
                           </div>
                           <div className="framer-2c9e5t" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-t2rmki" data-styles-preset="KlDvBsEyc" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217)))"}}>
-                              Connect to your business systems, understand your data and workflows, and activate agentic.
+                              The Coordinator clones the repo, runs a baseline test pass, then drives Planner, Coder, Tester and Reviewer.
                             </p>
                           </div>
                         </div>
@@ -125,7 +125,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Healthcare
+                                    Planner
                                   </p>
                                 </div>
                               </div>
@@ -140,7 +140,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Tech Assistance
+                                    Coder
                                   </p>
                                 </div>
                               </div>
@@ -155,7 +155,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Support
+                                    Tester
                                   </p>
                                 </div>
                               </div>
@@ -170,7 +170,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Marketer
+                                    Reviewer
                                   </p>
                                 </div>
                               </div>
@@ -185,7 +185,7 @@ export default function Features() {
                             <div className="framer-3nflbn" data-framer-name="Get Started" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <p className="framer-text framer-styles-preset-79ayo0" data-styles-preset="AVSIklFkd" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
                                 <span data-text-fill="true" className="framer-text" style={{backgroundImage: "linear-gradient(277deg, var(--token-991642a5-fe69-44f0-a456-0d249f695158, rgb(1, 117, 255)) 0%, var(--token-40eb5c15-2df6-4cc5-9a1c-8a90a74b480c, rgb(255, 205, 125)) 100%)"}}>
-                                  See Uses
+                                  See the flow
                                 </span>
                               </p>
                             </div>
@@ -208,7 +208,7 @@ export default function Features() {
                           </figure>
                           <div className="framer-xky7qq-container" data-code-component-plugin-id="84d4c1" style={{opacity: "1"}}>
                             <span style={{color: "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", fontSize: "16px", fontWeight: "400", fontFamily: "\"Inter\", \"Inter Placeholder\", sans-serif", textAlign: "left", fontStyle: "normal", letterSpacing: "-0.03em", lineHeight: "1.5em", height: "100%", width: "100%", minWidth: "0", whiteSpace: "pre", display: "inline-block", position: "relative"}} aria-live="polite">
-                              Help me wit
+                              Fix the login bug
                               <span style={{color: "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", opacity: "0", transition: "opacity 0.2s", fontWeight: "400", fontSize: "16px", fontFamily: "Inter, \"Inter Placeholder\", sans-serif"}} aria-hidden="true">
                                 |
                               </span>
@@ -229,12 +229,12 @@ export default function Features() {
                         <div className="framer-18rostv" data-framer-name="Title" style={{opacity: "1"}}>
                           <div className="framer-f2x98z" data-framer-name="Sign up and select Plan" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <h4 className="framer-text framer-styles-preset-1c78dmg" data-styles-preset="hVHiYTsnG">
-                              Alpha Technology
+                              Signed attestations
                             </h4>
                           </div>
                           <div className="framer-2c9e5t" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-t2rmki" data-styles-preset="KlDvBsEyc" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217)))"}}>
-                              Create valuable AI agents and agentic workflows with confidence and ongoing control.
+                              Each agent holds an Ed25519 did:key. Every attempt is signed and verifiable in the browser.
                             </p>
                           </div>
                         </div>
@@ -247,7 +247,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Multi-Agent
+                                    did:key
                                   </p>
                                 </div>
                               </div>
@@ -262,7 +262,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Latest Model
+                                    Ed25519
                                   </p>
                                 </div>
                               </div>
@@ -277,7 +277,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Dialog GPT
+                                    Canonical JSON
                                   </p>
                                 </div>
                               </div>
@@ -292,7 +292,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Supervisor Agents
+                                    Tamper-evident
                                   </p>
                                 </div>
                               </div>
@@ -307,7 +307,7 @@ export default function Features() {
                             <div className="framer-3nflbn" data-framer-name="Get Started" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <p className="framer-text framer-styles-preset-79ayo0" data-styles-preset="AVSIklFkd" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
                                 <span data-text-fill="true" className="framer-text" style={{backgroundImage: "linear-gradient(277deg, var(--token-991642a5-fe69-44f0-a456-0d249f695158, rgb(1, 117, 255)) 0%, var(--token-40eb5c15-2df6-4cc5-9a1c-8a90a74b480c, rgb(255, 205, 125)) 100%)"}}>
-                                  Explore Tech
+                                  How signing works
                                 </span>
                               </p>
                             </div>
@@ -343,12 +343,12 @@ export default function Features() {
                         <div className="framer-18rostv" data-framer-name="Title" style={{opacity: "1"}}>
                           <div className="framer-f2x98z" data-framer-name="Sign up and select Plan" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <h4 className="framer-text framer-styles-preset-1c78dmg" data-styles-preset="hVHiYTsnG">
-                              Enterprise data sources
+                              Per-repo trust policy
                             </h4>
                           </div>
                           <div className="framer-2c9e5t" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-t2rmki" data-styles-preset="KlDvBsEyc" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217)))"}}>
-                              Our design approach is ecosystem agnostic, allowing you to choose how you connect data.
+                              Set the trust threshold, minimum history, sensitive paths and always-flag task types per repo.
                             </p>
                           </div>
                         </div>
@@ -361,7 +361,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    SharePoint
+                                    Threshold
                                   </p>
                                 </div>
                               </div>
@@ -376,7 +376,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    SAP
+                                    Min history
                                   </p>
                                 </div>
                               </div>
@@ -391,7 +391,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Slack
+                                    Sensitive paths
                                   </p>
                                 </div>
                               </div>
@@ -406,7 +406,7 @@ export default function Features() {
                                 </svg>
                                 <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                    Confluence
+                                    Escalations
                                   </p>
                                 </div>
                               </div>
@@ -421,7 +421,7 @@ export default function Features() {
                             <div className="framer-3nflbn" data-framer-name="Get Started" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <p className="framer-text framer-styles-preset-79ayo0" data-styles-preset="AVSIklFkd" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
                                 <span data-text-fill="true" className="framer-text" style={{backgroundImage: "linear-gradient(277deg, var(--token-991642a5-fe69-44f0-a456-0d249f695158, rgb(1, 117, 255)) 0%, var(--token-40eb5c15-2df6-4cc5-9a1c-8a90a74b480c, rgb(255, 205, 125)) 100%)"}}>
-                                  Start Setup
+                                  Configure policy
                                 </span>
                               </p>
                             </div>

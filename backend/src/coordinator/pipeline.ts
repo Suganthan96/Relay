@@ -13,11 +13,12 @@ import { sandboxAvailable } from "./sandbox.js";
 import {
   prepareWorkspace,
   diffStat,
-  detectTestCommand,
+  detectChecks,
   commitAll,
   pushBranch,
-  runTestCommand,
+  runChecks,
   hasRegression,
+  type TestRun,
 } from "./workspace.js";
 import { runPlanner } from "../agents/planner.js";
 import { runCoder } from "../agents/coder.js";
@@ -31,6 +32,12 @@ const log = (taskId: string, msg: string) => console.log(`[${taskId.slice(0, 8)}
 function pathAllowed(file: string, globs: string[]): boolean {
   if (globs.length === 0) return true; // planner left it open
   return globs.some((g) => minimatch(file, g, { matchBase: true, nocase: true }));
+}
+
+/** one-line "test:ok build:FAIL boot:ok" from a runChecks result */
+function describeChecks(run: TestRun): string {
+  if (!run.phases?.length) return run.passed ? "pass" : "fail";
+  return run.phases.map((p) => `${p.name}:${p.passed ? "ok" : "FAIL"}`).join(" ");
 }
 
 export interface PipelineResult {
@@ -109,11 +116,18 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
   const ws = await prepareWorkspace(taskId, repo, token);
   let codeAttempt: TaskAttemptRow;
   try {
-    // Baseline: run the suite on the pristine clone BEFORE the Coder touches
-    // anything, so the Tester can tell a regression from a pre-existing failure.
-    const testCommand = (await detectTestCommand(ws.dir)) ?? "npm test";
-    const baseline = await runTestCommand(ws.dir, testCommand);
-    log(taskId, `baseline tests: ${baseline.passed ? "pass" : `fail (${baseline.failures.length} pre-existing)`}`);
+    // Baseline: run tests + build + boot-smoke on the pristine clone BEFORE the
+    // Coder touches anything, so the Tester can tell a regression from a
+    // pre-existing failure.
+    const checks = await detectChecks(ws.dir);
+    const testCommand = checks.testCommand ?? "npm test";
+    const checkPlan =
+      [checks.testCommand, checks.buildCommand, checks.startCommand && `boot :${checks.port}`]
+        .filter(Boolean)
+        .join(" + ") || "none detected";
+    log(taskId, `checks: ${checkPlan}`);
+    const baseline = await runChecks(ws.dir, checks);
+    log(taskId, `baseline: ${describeChecks(baseline)}`);
 
     log(taskId, "coding");
     const code = await runCoder({
@@ -147,29 +161,35 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
 
     // ---- TEST -------------------------------------------------------
     await patchTask(taskId, { status: "testing" });
-    log(taskId, `testing (${testCommand})`);
-    // Tester agent: may install deps, narrates what it saw.
-    const agentTest = await runTester({ workdir: ws.dir, testCommand, baseline });
-    // Authoritative after-state run (deps are installed now); compare to baseline.
-    const after = await runTestCommand(ws.dir, testCommand);
+    log(taskId, `testing (${checkPlan})`);
+    // Authoritative after-state run: tests + build + boot-smoke, compared to baseline.
+    const after = await runChecks(ws.dir, checks);
     const regression = hasRegression(baseline, after);
     const newFailures = after.failures.filter((f) => !baseline.failures.includes(f));
     // A pre-existing, unrelated failure does not fail THIS task — only a regression does.
     const testPassed = after.passed || !regression;
     const testOutcome: "passed" | "failed" = testPassed ? "passed" : "failed";
-    log(
-      taskId,
-      `tests: after=${after.passed ? "pass" : "fail"} regression=${regression} -> ${testOutcome}`,
-    );
+    const failedPhases = (after.phases ?? []).filter((p) => !p.passed).map((p) => p.name);
+    log(taskId, `checks: after=${describeChecks(after)} regression=${regression} -> ${testOutcome}`);
+
+    // Tester agent: may install deps, narrates what tests/build/boot showed.
+    const agentTest = await runTester({
+      workdir: ws.dir,
+      testCommand,
+      baseline,
+      checksSummary: `after=${describeChecks(after)}; ${
+        regression ? `NEW failures: ${newFailures.join("; ")}` : "no new failures vs baseline"
+      }`,
+    });
 
     const test = {
       passed: testPassed,
       outcome: testOutcome,
       summary: after.passed
-        ? "All tests pass."
+        ? "Tests pass, build succeeds, app boots."
         : regression
-          ? `Regression — new failure(s): ${newFailures.join("; ")}`
-          : `Suite has ${baseline.failures.length} pre-existing failure(s) unrelated to this change; no new failures introduced.`,
+          ? `Regression in ${failedPhases.join(", ") || "checks"} — new failure(s): ${newFailures.join("; ")}`
+          : `Pre-existing failure(s) in ${failedPhases.join(", ") || "checks"} unrelated to this change; nothing new introduced.`,
     };
 
     const testAttempt = await recordAttempt({
@@ -190,6 +210,8 @@ export async function runPipeline(taskId: string, opts: PipelineOptions = {}): P
         regression,
         newFailures,
         preExistingFailures: baseline.failures,
+        phases: (after.phases ?? []).map((p) => ({ name: p.name, passed: p.passed })),
+        checkPlan,
         testCommand,
       },
     });

@@ -51,6 +51,8 @@ export const config = {
   /** 'local' (clone on this host) or 'docker' (throwaway --network none container) */
   sandbox: () => optional("SANDBOX", "local") as "local" | "docker",
   sandboxImage: () => optional("SANDBOX_IMAGE", "relay-sandbox:latest"),
+  /** run the build + boot-and-HTTP-smoke checks in the Tester (default on) */
+  smoke: () => optional("RELAY_SMOKE", "true") !== "false",
 
   // --- escalation notifications (md 6·5) ---
   slackWebhookUrl: () => optional("SLACK_WEBHOOK_URL"),

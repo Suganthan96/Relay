@@ -23,7 +23,7 @@ export default function Testimonial() {
                       </figure>
                       <div className="framer-q7ns0q" data-framer-name="FEATURES" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                          TESTIMONIALS
+                          THE RESEARCH
                         </p>
                       </div>
                     </div>
@@ -36,13 +36,13 @@ export default function Testimonial() {
               <div className="framer-3strmq" data-framer-name="Main">
                 <div className="framer-2bhhq4" data-framer-name="Alpha Range Technology" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <h2 className="framer-text framer-styles-preset-mnfyzd" data-styles-preset="muXEgmE57">
-                    Trusted by customers
+                    Why a trust layer
                   </h2>
                 </div>
               </div>
               <div className="framer-rbqbue" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                 <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))"}}>
-                  Proven outcomes shared by industry leaders and innovators.
+                  What the studies say about autonomous agent pull requests.
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq is the top-performing AI Agent we’ve seen to date — resolving complex queries faster and more accurately than any human team could. It has not only enhanced our support operations but also improved client satisfaction across the board.
+                                46% of AI-agent bug-fix PRs are closed without ever merging: 1,497 of 3,225. Each one had already cost a human review.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -73,12 +73,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Daniel Reyes
+                                    MSR 26 study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Chief Operations Officer, LuminaTech
+                                    arXiv:2606.13468
                                   </p>
                                 </div>
                               </div>
@@ -100,7 +100,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq’s AI Agents have completely transformed our workflow efficiency. What once took hours now takes minutes. Their adaptability and precision make them the most capable AI solution we’ve ever implemented — truly redefining enterprise automation.
+                                Rejections cluster on correctness. Cursor: 46.7% introduces bugs or breaks APIs. Devin: 31.6% abandoned. Copilot: 10.7% plus 8.7% no value.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -108,12 +108,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Sarah Mitchell
+                                    Security-PR study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    VP of Digital Transformation, Nexora
+                                    arXiv:2604.19965
                                   </p>
                                 </div>
                               </div>
@@ -135,7 +135,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                With Cosmoq’s AI platform, our enterprise has gained speed, insight, and scalability. The intelligence behind their agents is unmatched — it’s like having an expert team working 24/7 with consistency and accuracy. Cosmoq continues to push the boundaries.
+                                Even merged agent PRs are not clean: 15.4% needed a reviewer to fix problems before they could land.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -143,12 +143,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Priya Nair
+                                    Agentic-PR analysis
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Head of Innovation, Altara Global
+                                    arXiv:2605.22534
                                   </p>
                                 </div>
                               </div>
@@ -170,7 +170,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq is the top-performing AI Agent we’ve seen to date — resolving complex queries faster and more accurately than any human team could. It has not only enhanced our support operations but also improved client satisfaction across the board.
+                                46% of AI-agent bug-fix PRs are closed without ever merging: 1,497 of 3,225. Each one had already cost a human review.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -178,12 +178,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Daniel Reyes
+                                    MSR 26 study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Chief Operations Officer, LuminaTech
+                                    arXiv:2606.13468
                                   </p>
                                 </div>
                               </div>
@@ -205,7 +205,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq’s AI Agents have completely transformed our workflow efficiency. What once took hours now takes minutes. Their adaptability and precision make them the most capable AI solution we’ve ever implemented — truly redefining enterprise automation.
+                                Rejections cluster on correctness. Cursor: 46.7% introduces bugs or breaks APIs. Devin: 31.6% abandoned. Copilot: 10.7% plus 8.7% no value.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -213,12 +213,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Sarah Mitchell
+                                    Security-PR study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    VP of Digital Transformation, Nexora
+                                    arXiv:2604.19965
                                   </p>
                                 </div>
                               </div>
@@ -240,7 +240,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                With Cosmoq’s AI platform, our enterprise has gained speed, insight, and scalability. The intelligence behind their agents is unmatched — it’s like having an expert team working 24/7 with consistency and accuracy. Cosmoq continues to push the boundaries.
+                                Even merged agent PRs are not clean: 15.4% needed a reviewer to fix problems before they could land.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -248,12 +248,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Priya Nair
+                                    Agentic-PR analysis
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Head of Innovation, Altara Global
+                                    arXiv:2605.22534
                                   </p>
                                 </div>
                               </div>
@@ -275,7 +275,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq is the top-performing AI Agent we’ve seen to date — resolving complex queries faster and more accurately than any human team could. It has not only enhanced our support operations but also improved client satisfaction across the board.
+                                46% of AI-agent bug-fix PRs are closed without ever merging: 1,497 of 3,225. Each one had already cost a human review.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -283,12 +283,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Daniel Reyes
+                                    MSR 26 study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Chief Operations Officer, LuminaTech
+                                    arXiv:2606.13468
                                   </p>
                                 </div>
                               </div>
@@ -310,7 +310,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq’s AI Agents have completely transformed our workflow efficiency. What once took hours now takes minutes. Their adaptability and precision make them the most capable AI solution we’ve ever implemented — truly redefining enterprise automation.
+                                Rejections cluster on correctness. Cursor: 46.7% introduces bugs or breaks APIs. Devin: 31.6% abandoned. Copilot: 10.7% plus 8.7% no value.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -318,12 +318,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Sarah Mitchell
+                                    Security-PR study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    VP of Digital Transformation, Nexora
+                                    arXiv:2604.19965
                                   </p>
                                 </div>
                               </div>
@@ -345,7 +345,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                With Cosmoq’s AI platform, our enterprise has gained speed, insight, and scalability. The intelligence behind their agents is unmatched — it’s like having an expert team working 24/7 with consistency and accuracy. Cosmoq continues to push the boundaries.
+                                Even merged agent PRs are not clean: 15.4% needed a reviewer to fix problems before they could land.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -353,12 +353,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Priya Nair
+                                    Agentic-PR analysis
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Head of Innovation, Altara Global
+                                    arXiv:2605.22534
                                   </p>
                                 </div>
                               </div>
@@ -380,7 +380,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq is the top-performing AI Agent we’ve seen to date — resolving complex queries faster and more accurately than any human team could. It has not only enhanced our support operations but also improved client satisfaction across the board.
+                                46% of AI-agent bug-fix PRs are closed without ever merging: 1,497 of 3,225. Each one had already cost a human review.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -388,12 +388,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Daniel Reyes
+                                    MSR 26 study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Chief Operations Officer, LuminaTech
+                                    arXiv:2606.13468
                                   </p>
                                 </div>
                               </div>
@@ -415,7 +415,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                Cosmoq’s AI Agents have completely transformed our workflow efficiency. What once took hours now takes minutes. Their adaptability and precision make them the most capable AI solution we’ve ever implemented — truly redefining enterprise automation.
+                                Rejections cluster on correctness. Cursor: 46.7% introduces bugs or breaks APIs. Devin: 31.6% abandoned. Copilot: 10.7% plus 8.7% no value.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -423,12 +423,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Sarah Mitchell
+                                    Security-PR study
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    VP of Digital Transformation, Nexora
+                                    arXiv:2604.19965
                                   </p>
                                 </div>
                               </div>
@@ -450,7 +450,7 @@ export default function Testimonial() {
                           <div className="framer-9ug2zc" data-framer-name="Content 1" style={{opacity: "1"}}>
                             <div className="framer-1t830cw" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent. Fin is the top-performing and most capable AI Agent\u2014handling more complex queries and achieving higher resolution rates than any other AI Agent." data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <h4 className="framer-text framer-styles-preset-16xzswl" data-styles-preset="iefaioo4M">
-                                With Cosmoq’s AI platform, our enterprise has gained speed, insight, and scalability. The intelligence behind their agents is unmatched — it’s like having an expert team working 24/7 with consistency and accuracy. Cosmoq continues to push the boundaries.
+                                Even merged agent PRs are not clean: 15.4% needed a reviewer to fix problems before they could land.
                               </h4>
                             </div>
                             <div className="framer-1ece5td" data-framer-name="Bottom" style={{opacity: "1"}}>
@@ -458,12 +458,12 @@ export default function Testimonial() {
                               <div className="framer-1o0g5xf" data-framer-name="Profile" style={{opacity: "1"}}>
                                 <div className="framer-1lja8ro" data-framer-name="Name" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                                    Priya Nair
+                                    Agentic-PR analysis
                                   </h4>
                                 </div>
                                 <div className="framer-ej6e2p" data-framer-name="Designation" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196)))"}}>
-                                    Head of Innovation, Altara Global
+                                    arXiv:2605.22534
                                   </p>
                                 </div>
                               </div>

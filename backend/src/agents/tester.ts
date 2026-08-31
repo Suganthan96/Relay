@@ -23,12 +23,17 @@ export async function runTester(input: TesterInput & { baseline?: TestRun }): Pr
     `Run the project's test suite with: ${input.testCommand}`,
     "Do not edit any files. If dependencies are missing, install them with the",
     "project's package manager, then run the tests.",
+    "The pipeline ALSO independently builds the project and — if it's a web app —",
+    "boots the server and hits it over HTTP, and compares all of that to a",
+    "baseline taken before the change. Its result:",
+    input.checksSummary ? `  ${input.checksSummary}` : "  (not available)",
     baselineNote,
     "",
-    "Summarise in 2-3 sentences: how many tests passed/failed, whether any",
-    "failure is NEW versus pre-existing, and whether the issue's fix is exercised",
-    "by a test. End with exactly one line: RESULT: PASS or RESULT: FAIL",
-    "(PASS = no NEW failures were introduced).",
+    "Summarise in 2-3 sentences: how many tests passed/failed, whether the build",
+    "still succeeds and the app still boots, whether any failure is NEW versus",
+    "pre-existing, and whether the issue's fix is exercised by a test. End with",
+    "exactly one line: RESULT: PASS or RESULT: FAIL",
+    "(PASS = no NEW failures were introduced in tests, build, or boot).",
   ].filter(Boolean).join("\n");
 
   const res = await runClaude({

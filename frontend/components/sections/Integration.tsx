@@ -37,7 +37,7 @@ export default function Integration() {
               </div>
               <div className="framer-10obiw3" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                 <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))"}}>
-                  Connect custom or pre-built connectors to your enterprise and third-party apps.
+                  Connect the GitHub App, Supabase and Slack, or a plain webhook, to your workflow.
                 </p>
               </div>
             </div>

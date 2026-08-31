@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="692" height="692" viewBox="0 0 692 692" fill="none">
+  <defs>
+    <radialGradient id="orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eaf2ff"/>
+      <stop offset="26%" stop-color="#4d9bff"/>
+      <stop offset="55%" stop-color="#1f6feb"/>
+      <stop offset="78%" stop-color="#ffb44d"/>
+      <stop offset="100%" stop-color="#ffb44d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="44%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ring" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="97%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="346" cy="346" r="330" fill="url(#orb)"/>
+  <circle cx="346" cy="346" r="300" fill="url(#core)"/>
+  <circle cx="346" cy="346" r="300" fill="url(#ring)"/>
+</svg>

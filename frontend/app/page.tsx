@@ -1,8 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import BuyNowBadge from "@/components/BuyNowBadge";
 import CookieBanner from "@/components/CookieBanner";
-import FramerBadge from "@/components/FramerBadge";
 import SvgTemplates from "@/components/SvgTemplates";
 import Hero from "@/components/sections/Hero";
 import HighlightedText from "@/components/sections/HighlightedText";
@@ -11,8 +9,6 @@ import Features from "@/components/sections/Features";
 import Products from "@/components/sections/Products";
 import Steps from "@/components/sections/Steps";
 import DataAndPrivacy from "@/components/sections/DataAndPrivacy";
-import Testimonial from "@/components/sections/Testimonial";
-import Pricing from "@/components/sections/Pricing";
 import Faq from "@/components/sections/Faq";
 import Decor from "@/components/sections/Decor";
 import Integration from "@/components/sections/Integration";
@@ -31,8 +27,6 @@ export default function Page() {
           <Products />
           <Steps />
           <DataAndPrivacy />
-          <Testimonial />
-          <Pricing />
           <Faq />
           <Decor />
           <Integration />
@@ -40,12 +34,10 @@ export default function Page() {
           <div id="overlay" />
           <div className="framer-6to7uz" />
           <Footer />
-          <BuyNowBadge />
           <CookieBanner />
         </div>
         <div id="template-overlay" />
       </div>
-      <FramerBadge />
       <SvgTemplates />
     </>
   );

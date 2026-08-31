@@ -8,7 +8,7 @@ export default function Hero() {
               <div className="framer-1kktr3t" data-framer-appear-id="1kktr3t" data-framer-name="Label" style={{opacity: "1", transform: "none", willChange: "transform"}}>
                 <div className="framer-9sobwf" data-framer-name="Login" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <p className="framer-text framer-styles-preset-1p9z0bc" data-styles-preset="lW2kM2SoC" style={{"--framer-text-color": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))"}}>
-                    Beta Version is launching on 12th September
+                    A human always makes the final call. Relay never merges.
                   </p>
                 </div>
               </div>
@@ -18,91 +18,82 @@ export default function Hero() {
                     <h1 className="framer-text framer-styles-preset-1ucu1n1" data-styles-preset="D2FyQ7kfS">
                       <span style={{whiteSpace: "nowrap"}}>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          N
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          e
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          x
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          t
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          -
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          g
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          e
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          n
+                          A
                         </span>
                       </span>
                       {" "}
                       <span style={{whiteSpace: "nowrap"}}>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          e
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          n
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
                           t
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          e
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
                           r
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          p
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          r
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          i
+                          u
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
                           s
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          e
+                          t
                         </span>
                       </span>
                       {" "}
                       <span style={{whiteSpace: "nowrap"}}>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          w
+                          l
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          y
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          f
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          c
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          d
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
                           i
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          t
+                          n
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          h
-                        </span>
-                      </span>
-                      {" "}
-                      <span style={{whiteSpace: "nowrap"}}>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          A
-                        </span>
-                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          I
+                          g
                         </span>
                       </span>
                       {" "}
                       <span style={{whiteSpace: "nowrap"}}>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                          A
+                          a
                         </span>
                         <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
                           g
@@ -125,338 +116,437 @@ export default function Hero() {
                 </div>
                 <div className="framer-oy54su" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-color": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))"}}>
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        A
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          R
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          l
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          y
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          k
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          G
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          i
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          H
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          b
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          i
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          d
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          y
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          m
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          g
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          p
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          l
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          l
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          q
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          w
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          i
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          h
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          f
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          C
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          l
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          d
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          g
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          n
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          ,
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          g
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          d
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          b
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          y
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          l
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          i
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          v
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          s
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          c
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          ,
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          a
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          n
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          d
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          n
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          v
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          m
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          r
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          g
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          e
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          d
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          w
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          i
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          h
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          t
+                        </span>
+                      </span>
+                      {" "}
+                      <span style={{whiteSpace: "nowrap"}}>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          y
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          o
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          u
+                        </span>
+                        <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
+                          .
+                        </span>
                       </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        c
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        c
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        l
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        a
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        t
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        t
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        h
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        p
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        d
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        f
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        b
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        u
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        i
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        n
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        w
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        i
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        t
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        h
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        t
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        h
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        C
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        O
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        S
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        M
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        O
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        C
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        P
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        l
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        a
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        t
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        f
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        m
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        a
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        n
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        d
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        u
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        A
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        I
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        l
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        u
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        t
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        i
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        n
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        f
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        w
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        k
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        ,
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        v
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        i
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        c
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        ,
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        a
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        n
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        d
-                      </span>
-                    </span>
-                    {" "}
-                    <span style={{whiteSpace: "nowrap"}}>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        p
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        r
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        o
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        c
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        e
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        s
-                      </span>
-                      <span style={{display: "inline-block", opacity: "1", filter: "blur(0px)", transform: "none", willChange: "transform"}}>
-                        .
-                      </span>
-                    </span>
                   </p>
                 </div>
               </div>
@@ -482,7 +572,7 @@ export default function Hero() {
               <div className="ssr-variant">
                 <figure className="framer-tqk5kz" style={{height: "auto", aspectRatio: "1.6035665294924555"}}>
                   <div style={{position: "absolute", borderRadius: "inherit", cornerShape: "inherit", top: "0", right: "0", bottom: "0", left: "0"}} data-framer-background-image-wrapper="true">
-                    <img decoding="auto" width="2338" height="1458" sizes="(min-width: 1200px) min(min(100vw - 80px, 1200px) - 80px, 1200px), (min-width: 810px) and (max-width: 1199.98px) min(min(100vw - 80px, 1200px) - 80px, 1200px), (max-width: 809.98px) min(100vw - 40px, 1200px)" srcSet="/images/a6n9gdn1t1hjbhybb15vfr9os.png 512w, /images/a6n9gdn1t1hjbhybb15vfr9os.png 1024w, /images/a6n9gdn1t1hjbhybb15vfr9os.png 2048w, /images/a6n9gdn1t1hjbhybb15vfr9os.png 2338w" src="/images/a6n9gdn1t1hjbhybb15vfr9os.png" alt="" style={{display: "block", width: "100%", height: "100%", borderRadius: "inherit", cornerShape: "inherit", objectPosition: "center", objectFit: "contain"}} />
+                    <img decoding="auto" width="2338" height="1458" sizes="(min-width: 1200px) min(min(100vw - 80px, 1200px) - 80px, 1200px), (min-width: 810px) and (max-width: 1199.98px) min(min(100vw - 80px, 1200px) - 80px, 1200px), (max-width: 809.98px) min(100vw - 40px, 1200px)" srcSet="/images/relay-github-pr.svg 512w, /images/relay-github-pr.svg 1024w, /images/relay-github-pr.svg 2048w, /images/relay-github-pr.svg 2338w" src="/images/relay-github-pr.svg" alt="A merged GitHub pull request opened by Relay, with four signed agent attestations" style={{display: "block", width: "100%", height: "100%", borderRadius: "inherit", cornerShape: "inherit", objectPosition: "center", objectFit: "contain"}} />
                   </div>
                 </figure>
               </div>

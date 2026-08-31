@@ -13,7 +13,7 @@ The trust + orchestration layer from `relay-project-description.md`. Node 22 + T
 | §4 | Signed `task_attempts` writer (`src/db/attempts.ts`) | ✅ **verified end-to-end** (`npm run db:verify`) against the live DB |
 | §3 | Coordinator + pipeline (`src/coordinator/pipeline.ts`) | ✅ runs end-to-end (`npm run pipeline`) |
 | §3 | Planner / Coder / Tester / Reviewer agents | ✅ all four are real headless `claude -p` runs (no API key) |
-| §3 | Tester = baseline diff | ✅ suite is run on the pristine clone first; only a **new** failure (regression) fails the task — pre-existing unrelated failures don't |
+| §3 | Tester = tests + build + boot, baseline diff | ✅ runs the test suite, re-builds the project, and (for a web app) boots the server and HTTP-smokes `/`; all three run on the pristine clone first so only a **new** failure — a new test failure, a broken build, or a route that stopped answering — fails the task. `RELAY_SMOKE=false` reverts to tests only. |
 | §3 | Reputation gate (`src/coordinator/reputation.ts`) | ✅ per `(agent, task_type)`; escalates on no/low history or sensitive area |
 | §3 | Octokit PR (`src/github/pr.ts`) | ✅ fast-approve / flagged PR via a GitHub App installation token; else stops at a signed decision packet |
 | §3 | GitHub issue ingestion — App webhook (`src/server.ts`) | ✅ `issues.opened` → `createTask` → detached `runPipeline` |

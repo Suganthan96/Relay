@@ -18,7 +18,7 @@ export default function DataAndPrivacy() {
                           </figure>
                           <div className="framer-q7ns0q" data-framer-name="FEATURES" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                              DATA AND PRIVACY
+                              TRUST AND PROVENANCE
                             </p>
                           </div>
                         </div>
@@ -31,14 +31,14 @@ export default function DataAndPrivacy() {
                   <div className="framer-vceh6m" data-framer-name="Main">
                     <div className="framer-flkph0" data-framer-name="Alpha Range Technology" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                       <h2 className="framer-text framer-styles-preset-mnfyzd" data-styles-preset="muXEgmE57">
-                        Multi-Layer Security
+                        Signed, gated, never merged
                       </h2>
                     </div>
                   </div>
                 </div>
                 <div className="framer-1c11viz" data-framer-name="Fin is the top-performing and most capable AI Agent\u2014handling more complex queries Fin is the top-performing and most capable AI Agent\u2014handling more complex queriesFin is the top-performing and most capable." data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))"}}>
-                    Protect your enterprise with multi-layered AI security. From data encryption to behavior monitoring, every layer works together.
+                    Every handoff is an Ed25519-signed attestation, trust is earned from verified outcomes, and a human always merges.
                   </p>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function DataAndPrivacy() {
                           </svg>
                           <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                              Intelligent Protection
+                              Signed attestations
                             </p>
                           </div>
                         </div>
@@ -70,7 +70,7 @@ export default function DataAndPrivacy() {
                           </svg>
                           <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                              Real-Time Threat Detection
+                              In-browser verification
                             </p>
                           </div>
                         </div>
@@ -87,7 +87,7 @@ export default function DataAndPrivacy() {
                           </svg>
                           <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                             <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                              Seamless Compliance
+                              Human-in-the-loop merge
                             </p>
                           </div>
                         </div>

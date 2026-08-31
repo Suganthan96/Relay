@@ -8,37 +8,49 @@ export default function HighlightedText() {
               <div className="ssr-variant hidden-1pkxm8v hidden-zmbq2w">
                 <div style={{maxWidth: "100%", width: "100%", wordWrap: "break-word", overflowWrap: "break-word", whiteSpace: "normal", fontFamily: "\"Inter Display\", \"Inter Display Placeholder\", sans-serif", fontSize: "48px", fontStyle: "normal", fontWeight: "400", letterSpacing: "-0.03em", lineHeight: "1.2em", textAlign: "left"}}>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    We
+                    Relay
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    help
+                    plans,
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    enterprises
+                    writes,
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    reimagine
+                    tests
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    business
+                    and
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    growth
+                    reviews
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    a
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    fix
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
@@ -50,67 +62,85 @@ export default function HighlightedText() {
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    our
+                    four
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    AI
+                    Claude
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    Platform,
+                    agents,
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    Work
+                    then
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    Solutions,
+                    opens
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    and
+                    the
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    Intelligent
+                    pull
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    Marketplace.
+                    request
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    for
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    you.
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {"\n"}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    Unlock
+                    Every
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    efficiency,
+                    handoff
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    automation,
+                    is
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    signed
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
@@ -122,25 +152,61 @@ export default function HighlightedText() {
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    innovation
+                    gated
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    across
+                    by
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    every
+                    trust.
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {" "}
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
-                    workflow.
+                    A
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    human
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    always
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    makes
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    the
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    final
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    {" "}
+                  </span>
+                  <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
+                    call.
                   </span>
                   <span style={{display: "inline", color: "var(--token-0eb0d570-0e27-4070-997d-d65cb58db903, rgba(255, 255, 255, 0.4))"}}>
                     {"\n"}
@@ -175,7 +241,7 @@ export default function HighlightedText() {
             <div className="ssr-variant">
               <figure className="framer-rkq3o0" data-framer-name="Gradient Circle" style={{opacity: "1", transform: "rotate(268.425deg)", willChange: "transform"}}>
                 <div style={{position: "absolute", borderRadius: "inherit", cornerShape: "inherit", top: "0", right: "0", bottom: "0", left: "0"}} data-framer-background-image-wrapper="true">
-                  <img decoding="auto" loading="lazy" width="692" height="692" sizes="(min-width: 1200px) max(min(max((min(max(100vw - 80px, 1px), 1200px) - 48px) / 2, 1px), 346px), 1px), (min-width: 810px) and (max-width: 1199.98px) max(min(min(max(100vw - 80px, 1px), 1200px), 346px), 1px), (max-width: 809.98px) max(min(min(max(100vw - 40px, 1px), 1200px), 346px), 1px)" srcSet="/images/emeabgugaj1mrftuh9nccnlosk.webp 512w, /images/emeabgugaj1mrftuh9nccnlosk.webp 692w" src="/images/emeabgugaj1mrftuh9nccnlosk.webp" alt="" style={{display: "block", width: "100%", height: "100%", borderRadius: "inherit", cornerShape: "inherit", objectPosition: "center", objectFit: "cover"}} />
+                  <img decoding="auto" loading="lazy" width="692" height="692" sizes="(min-width: 1200px) max(min(max((min(max(100vw - 80px, 1px), 1200px) - 48px) / 2, 1px), 346px), 1px), (min-width: 810px) and (max-width: 1199.98px) max(min(min(max(100vw - 80px, 1px), 1200px), 346px), 1px), (max-width: 809.98px) max(min(min(max(100vw - 40px, 1px), 1200px), 346px), 1px)" srcSet="/images/relay-sphere.svg 512w, /images/relay-sphere.svg 692w" src="/images/relay-sphere.svg" alt="" style={{display: "block", width: "100%", height: "100%", borderRadius: "inherit", cornerShape: "inherit", objectPosition: "center", objectFit: "cover"}} />
                 </div>
               </figure>
             </div>

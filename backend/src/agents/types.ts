@@ -47,6 +47,8 @@ export interface TesterInput {
   workdir: string;
   /** command the project uses, discovered from package.json */
   testCommand: string;
+  /** one-line summary of the pipeline's own test/build/boot check result */
+  checksSummary?: string;
 }
 
 export interface TesterResult extends AgentResult {

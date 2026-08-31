@@ -16,7 +16,7 @@ export default function Products() {
                       </figure>
                       <div className="framer-q7ns0q" data-framer-name="FEATURES" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                          PRODUCTS
+                          THE PIPELINE
                         </p>
                       </div>
                     </div>
@@ -29,13 +29,13 @@ export default function Products() {
               <div className="framer-dvau4j" data-framer-name="Main">
                 <div className="framer-1d1afzp" data-framer-name="Alpha Range Technology" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <h2 className="framer-text framer-styles-preset-mnfyzd" data-styles-preset="muXEgmE57">
-                    Multiple Products
+                    Four agents, gated end to end
                   </h2>
                 </div>
               </div>
               <div className="framer-yq5nkb" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                 <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))"}}>
-                  Covers all major verticals in the tech industry with top intelligence.
+                  From issue to reviewed pull request, with a reputation gate before any code is written.
                 </p>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Products() {
                     <div className="framer-JiE0Z framer-n3Cte framer-1oegfg3 framer-v-1oegfg3" data-border="true" data-framer-name="Active" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "1px", "--border-color": "var(--token-f4dc11a3-eab6-45ff-bb5d-90cc77e6a1e2, rgba(125, 164, 255, 0.16))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", borderBottomLeftRadius: "999px", borderBottomRightRadius: "999px", borderTopLeftRadius: "999px", borderTopRightRadius: "999px", opacity: "1"}}>
                       <div className="framer-en8xgk" data-framer-name="Marketing" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-74e333f8-fe87-4945-af87-cae5b7e16c10, rgb(0, 0, 0))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-74e333f8-fe87-4945-af87-cae5b7e16c10, rgb(0, 0, 0)))"}}>
-                          Automation
+                          Pipeline
                         </p>
                       </div>
                     </div>
@@ -57,7 +57,7 @@ export default function Products() {
                     <div className="framer-JiE0Z framer-n3Cte framer-1oegfg3 framer-v-1ktappr" data-border="true" data-framer-name="Default" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "1px", "--border-color": "var(--token-f4dc11a3-eab6-45ff-bb5d-90cc77e6a1e2, rgba(125, 164, 255, 0.16))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-5a7f2bca-ee8c-42c5-80e1-f72de38d4fdf, rgba(255, 255, 255, 0.07))", borderBottomLeftRadius: "999px", borderBottomRightRadius: "999px", borderTopLeftRadius: "999px", borderTopRightRadius: "999px", opacity: "1"}}>
                       <div className="framer-en8xgk" data-framer-name="Marketing" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Banking
+                          Gating
                         </p>
                       </div>
                     </div>
@@ -66,7 +66,7 @@ export default function Products() {
                     <div className="framer-JiE0Z framer-n3Cte framer-1oegfg3 framer-v-1ktappr" data-border="true" data-framer-name="Default" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "1px", "--border-color": "var(--token-f4dc11a3-eab6-45ff-bb5d-90cc77e6a1e2, rgba(125, 164, 255, 0.16))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-5a7f2bca-ee8c-42c5-80e1-f72de38d4fdf, rgba(255, 255, 255, 0.07))", borderBottomLeftRadius: "999px", borderBottomRightRadius: "999px", borderTopLeftRadius: "999px", borderTopRightRadius: "999px", opacity: "1"}}>
                       <div className="framer-en8xgk" data-framer-name="Marketing" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-839225cb-b1fc-470d-a0c2-2eb7fcc590b8, rgb(255, 255, 255)))"}}>
-                          Recruitment
+                          Review
                         </p>
                       </div>
                     </div>
@@ -77,12 +77,12 @@ export default function Products() {
                     <div className="framer-zcamkz" data-framer-name="Top" style={{opacity: "1"}}>
                       <div className="framer-io5gss" data-framer-name="Alpha Range Technology" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <h4 className="framer-text framer-styles-preset-1c78dmg" data-styles-preset="hVHiYTsnG">
-                          Process Automation
+                          The reputation gate
                         </h4>
                       </div>
                       <div className="framer-1mrygx3" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                         <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217)))"}}>
-                          Streamline complex workflows with intelligent AI agents that enhance efficiency, accuracy, and speed across your enterprise.
+                          Before the Coder runs, Relay reads its live trust score for this task type and routes to fast-approve or flagged review.
                         </p>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ export default function Products() {
                           <div className="framer-o1thv5" data-framer-name="Content" style={{opacity: "1"}}>
                             <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                Automate Tasks — Reduce manual effort
+                                Proven agent, in scope, tests green: one click
                               </p>
                             </div>
                             <div className="framer-1l4bl6k" data-framer-name="Label" style={{backgroundColor: "var(--token-2765094e-0f8b-477f-9e2a-092fb0171343, rgba(255, 255, 255, 0.1))", borderRadius: "10px", boxShadow: "rgba(255, 255, 255, 0.31) 0px 0px 4px 0px inset", opacity: "1"}}>
@@ -113,7 +113,7 @@ export default function Products() {
                           <div className="framer-o1thv5" data-framer-name="Content" style={{opacity: "1"}}>
                             <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                Optimize Workflows — Boost productivity
+                                Low trust or scope drift: flagged review
                               </p>
                             </div>
                             <div className="framer-1l4bl6k" data-framer-name="Label" style={{backgroundColor: "var(--token-2765094e-0f8b-477f-9e2a-092fb0171343, rgba(255, 255, 255, 0.1))", borderRadius: "10px", boxShadow: "rgba(255, 255, 255, 0.31) 0px 0px 4px 0px inset", opacity: "1"}}>
@@ -134,7 +134,7 @@ export default function Products() {
                           <div className="framer-o1thv5" data-framer-name="Content" style={{opacity: "1"}}>
                             <div className="framer-v3ildb" data-framer-name="Healthcare" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                               <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-7ed67f45-7ffc-4523-9689-9d08f6aa2909, rgb(209, 212, 227)))"}}>
-                                Stay Compliant — Ensure accuracy
+                                Sensitive path: always a human
                               </p>
                             </div>
                             <div className="framer-1l4bl6k" data-framer-name="Label" style={{backgroundColor: "var(--token-2765094e-0f8b-477f-9e2a-092fb0171343, rgba(255, 255, 255, 0.1))", borderRadius: "10px", boxShadow: "rgba(255, 255, 255, 0.31) 0px 0px 4px 0px inset", opacity: "1"}}>
@@ -155,7 +155,7 @@ export default function Products() {
                   <div className="framer-19jweer" data-framer-name="Empty" style={{backgroundColor: "var(--token-365216f8-7ee6-4f9f-94e0-ca7d584e4354, rgba(255, 254, 250, 0))", opacity: "1"}} />
                   <figure className="framer-1kpra2s" data-framer-name="Dashboard 1" style={{filter: "drop-shadow(rgba(0, 0, 0, 0.18) -16px 11px 7px)", willChange: "transform", opacity: "1", transform: "none"}}>
                     <div style={{position: "absolute", borderRadius: "inherit", cornerShape: "inherit", top: "0", right: "0", bottom: "0", left: "0"}} data-framer-background-image-wrapper="true">
-                      <img decoding="auto" width="1924" height="1237" sizes="(min-width: 1200px) 679.1104px, (min-width: 810px) and (max-width: 1199.98px) calc(min(max(100vw - 80px, 1px), 1200px) - 32px), (max-width: 809.98px) calc(calc(min(max(100vw, 1px), 1200px) - 40px) - 32px)" srcSet="/images/7vqu2ppdy0g0ugp9mracnuh6lo.png 512w, /images/7vqu2ppdy0g0ugp9mracnuh6lo.png 1024w, /images/7vqu2ppdy0g0ugp9mracnuh6lo.png 1924w" src="/images/7vqu2ppdy0g0ugp9mracnuh6lo.png" alt="" style={{display: "block", width: "100%", height: "100%", borderRadius: "inherit", cornerShape: "inherit", objectPosition: "center", objectFit: "contain"}} />
+                      <img decoding="auto" width="1924" height="1237" sizes="(min-width: 1200px) 679.1104px, (min-width: 810px) and (max-width: 1199.98px) calc(min(max(100vw - 80px, 1px), 1200px) - 32px), (max-width: 809.98px) calc(calc(min(max(100vw, 1px), 1200px) - 40px) - 32px)" srcSet="/images/relay-github-pr.svg 512w, /images/relay-github-pr.svg 1024w, /images/relay-github-pr.svg 1924w" src="/images/relay-github-pr.svg" alt="" style={{display: "block", width: "100%", height: "100%", borderRadius: "inherit", cornerShape: "inherit", objectPosition: "center", objectFit: "contain"}} />
                     </div>
                   </figure>
                 </div>
@@ -180,12 +180,12 @@ export default function Products() {
                   <div className="framer-1ww7ps4" data-framer-name="Label" style={{opacity: "1"}}>
                     <div className="framer-ex0bwp" data-framer-name="Title" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                        Healthcare
+                        Planner
                       </h4>
                     </div>
                     <div className="framer-1cdar5d" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                        Boost sales with smart automation tools.
+                        Turns the issue into a task type, a plan and a declared file scope.
                       </p>
                     </div>
                   </div>
@@ -209,12 +209,12 @@ export default function Products() {
                   <div className="framer-1ww7ps4" data-framer-name="Label" style={{opacity: "1"}}>
                     <div className="framer-ex0bwp" data-framer-name="Title" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                        Marketing
+                        Coder
                       </h4>
                     </div>
                     <div className="framer-1cdar5d" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                        Optimize campaigns with intelligent automation.
+                        Edits the clone, tool-locked to the paths the Planner declared.
                       </p>
                     </div>
                   </div>
@@ -238,12 +238,12 @@ export default function Products() {
                   <div className="framer-1ww7ps4" data-framer-name="Label" style={{opacity: "1"}}>
                     <div className="framer-ex0bwp" data-framer-name="Title" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                        Ecommerce
+                        Tester
                       </h4>
                     </div>
                     <div className="framer-1cdar5d" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                        Accelerate coding and improve complex workflows.
+                        Runs the suite against a baseline clone: only a new regression fails the task.
                       </p>
                     </div>
                   </div>
@@ -267,12 +267,12 @@ export default function Products() {
                   <div className="framer-1ww7ps4" data-framer-name="Label" style={{opacity: "1"}}>
                     <div className="framer-ex0bwp" data-framer-name="Title" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <h4 className="framer-text framer-styles-preset-57if0j" data-styles-preset="jMKRHn13U">
-                        Development
+                        Reviewer
                       </h4>
                     </div>
                     <div className="framer-1cdar5d" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{"--extracted-r6o4lv": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171))", "--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                       <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--extracted-r6o4lv, var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(132, 145, 171)))"}}>
-                        Improve patient care with intelligent automation.
+                        Weighs the diff, tests and reputation into fast-approve or flagged.
                       </p>
                     </div>
                   </div>

@@ -29,13 +29,13 @@ export default function Faq() {
               <div className="framer-4psvsu" data-framer-name="Main">
                 <div className="framer-1txfqpi" data-framer-name="Alpha Range Technology" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                   <h2 className="framer-text framer-styles-preset-mnfyzd" data-styles-preset="muXEgmE57">
-                    Curious About Cosmoq?
+                    Curious about Relay?
                   </h2>
                 </div>
               </div>
               <div className="framer-1vckr1e" data-framer-name="Subtext" data-framer-component-type="RichTextContainer" style={{transform: "none"}}>
                 <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(176, 190, 217))"}}>
-                  Answers to common questions about our AI-powered enterprise platform.
+                  Common questions about the reputation-gated agent pipeline.
                 </p>
               </div>
             </div>
@@ -49,7 +49,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            What is COSMOQ?
+                            What is Relay?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            Relay is a trust layer for autonomous coding agents. It takes a GitHub issue to a ready-to-merge pull request with four headless Claude agents — Planner, Coder, Tester, Reviewer — gates every handoff on a signed reputation score, and never merges without a human.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -69,7 +72,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            How are AI Agents different from automation tools?
+                            How is this different from Copilot or OpenHands?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            Those agents write a fix and open a PR, and every PR is then reviewed the same way. Relay acts before the PR: a reputation gate decides whether the agent has earned the right to act on this kind of change, and routes the result to a one-click fast-approve or a flagged review with a full decision packet.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -89,7 +95,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            Can COSMOQ integrate with our existing systems?
+                            Does Relay ever merge on its own?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            No. Relay opens the PR and tells you how much to trust it; a human's approval is what squash-merges it and closes the issue. Every approve or reject is itself signed and feeds back into the trust score.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -109,7 +118,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            Is COSMOQ secure for enterprise use?
+                            How is the trust score calculated?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            trust = (tests_ok + 3·approvals + 1) / (tests_total + 3·(approvals + rejections) + 2). A new agent starts at 0.50, a human approval counts as three passing tests, and a single rejection pulls the score hard toward zero. Scores are scoped per agent, task type and org.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -135,7 +147,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            How quickly can COSMOQ be implemented?
+                            What stops the Coder from touching the wrong files?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            The Planner declares a file scope up front and the Coder is tool-locked to it — Edit and Write only on the declared paths. Anything outside that scope can't be changed, and scope drift routes the run to a flagged review.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -155,7 +170,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            Can AI Agents replace human employees?
+                            What if the repo's tests were already failing?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            The Tester runs the suite on a pristine baseline clone before the Coder touches anything, then compares. Only a new failure fails the task — pre-existing unrelated failures are ignored.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -175,7 +193,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            How does COSMOQ improve customer service?
+                            How are agent attestations verified?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            Each agent holds an Ed25519 did:key. Every handoff is written as a signed task_attempt with canonical JSON, chained by parent. The dashboard re-verifies the signatures in the browser — edit a record in the database and the badge flips from verified to tampered.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>
@@ -195,7 +216,10 @@ export default function Faq() {
                       <div className="framer-144r8qr" data-border="true" data-framer-name="Question" data-highlight="true" tabIndex={0} style={{"--border-bottom-width": "0px", "--border-color": "var(--token-63f7583a-ac58-4fab-bed6-928aed613254, rgb(47, 57, 80))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", opacity: "1"}}>
                         <div className="framer-d7agds" data-framer-name="What industries does Vertica Studio work with?" data-framer-component-type="RichTextContainer" style={{"--framer-paragraph-spacing": "0px", transform: "none", opacity: "1"}}>
                           <p className="framer-text framer-styles-preset-kng7jv" data-styles-preset="cDiAQHEyE" style={{"--framer-text-alignment": "left"}}>
-                            Is COSMOQ scalable for global operations?
+                            Can I set different rules per repo?
+                          </p>
+                          <p className="framer-text framer-styles-preset-1xv0u9n" data-styles-preset="VsDceC7bv" style={{"--framer-text-color": "var(--token-e77749d5-1f11-472b-b926-5090d7e5b50e, rgb(155, 169, 196))", marginTop: "10px"}}>
+                            Yes. relay_policies holds a per-repo trust threshold, minimum history, sensitive paths and always-flag or auto-approve task types. Slack and webhook escalations and multi-org isolation are configured the same way.
                           </p>
                         </div>
                         <div className="framer-updvjf" data-framer-name="Icon" style={{transform: "none", opacity: "1"}}>

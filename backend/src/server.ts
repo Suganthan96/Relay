@@ -3,7 +3,7 @@ import express from "express";
 import { createNodeMiddleware } from "@octokit/webhooks";
 import { config } from "./config.js";
 import { githubApp } from "./github/auth.js";
-import { createTask } from "./db/tasks.js";
+import { createTask, listResumableTasks } from "./db/tasks.js";
 import { runPipeline } from "./coordinator/pipeline.js";
 import { applyDecision } from "./coordinator/decision.js";
 
@@ -90,4 +90,31 @@ server.post("/api/decision", async (req, res) => {
 });
 
 const port = config.port();
-server.listen(port, () => console.log(`Relay webhook + API listening on :${port}`));
+server.listen(port, () => {
+  console.log(`Relay webhook + API listening on :${port}`);
+  void resumeOrphanedTasks();
+});
+
+/**
+ * The pipeline runs in this process; a crash or restart leaves any in-flight
+ * task stuck in `planning`/`coding`/… with no way to recover. On boot, pick up
+ * anything that stalled and run it again (idempotent — the pipeline re-clones
+ * and re-plans from the task row).
+ */
+async function resumeOrphanedTasks(): Promise<void> {
+  try {
+    const stuck = await listResumableTasks();
+    if (!stuck.length) return;
+    console.log(
+      `resuming ${stuck.length} orphaned task(s): ${stuck.map((t) => `${t.id.slice(0, 8)}(${t.status})`).join(", ")}`,
+    );
+    for (const t of stuck) {
+      void runPipeline(t.id)
+        .then((r) => console.log(`resumed ${t.id} -> ${r.status}${r.prUrl ? ` ${r.prUrl}` : ""}`))
+        .catch((e) => console.error(`resume ${t.id} failed:`, e));
+      await new Promise((r) => setTimeout(r, 3000)); // stagger so we don't fork N pipelines at once
+    }
+  } catch (e) {
+    console.error("resume sweep failed:", e);
+  }
+}

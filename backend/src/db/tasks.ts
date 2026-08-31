@@ -33,6 +33,24 @@ export async function getTask(id: string): Promise<TaskRow> {
   return data as TaskRow;
 }
 
+/** In-progress statuses. If the server dies mid-run the task is left in one of
+ *  these forever; the startup sweep re-runs them. */
+const RESUMABLE: TaskStatus[] = ["open", "planning", "coding", "testing", "reviewing"];
+
+/** Tasks that started (or should have started) but haven't advanced recently —
+ *  orphaned by a crash/restart. Used by the server's startup recovery sweep. */
+export async function listResumableTasks(staleMinutes = 3): Promise<TaskRow[]> {
+  const cutoff = new Date(Date.now() - staleMinutes * 60_000).toISOString();
+  const { data, error } = await db()
+    .from("tasks")
+    .select("*")
+    .in("status", RESUMABLE)
+    .lt("updated_at", cutoff)
+    .eq("org_slug", config.orgSlug());
+  if (error) throw new Error(`listResumableTasks failed: ${error.message}`);
+  return (data ?? []) as TaskRow[];
+}
+
 export interface TaskPatch {
   status?: TaskStatus;
   task_type?: string;
