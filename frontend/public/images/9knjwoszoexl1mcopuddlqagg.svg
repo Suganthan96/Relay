@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-  <g stroke-width="7" stroke-linecap="round" fill="none">
-    <path d="M83.58 55.32 A 34 34 0 0 1 55.32 83.58" stroke="#ffffff"/>
-    <path d="M44.68 83.58 A 34 34 0 0 1 16.42 55.32" stroke="#ffffff"/>
-    <path d="M16.42 44.68 A 34 34 0 0 1 44.68 16.42" stroke="#ffffff"/>
-    <path d="M55.32 16.42 A 34 34 0 0 1 83.58 44.68" stroke="#0175ff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="335" viewBox="0 0 1200 335" fill="none">
+  <g stroke-width="26" stroke-linecap="round" fill="none">
+    <path d="M285.52 185.77 A 120 120 0 0 1 185.77 285.52" stroke="#ffffff"/>
+    <path d="M148.23 285.52 A 120 120 0 0 1 48.48 185.77" stroke="#ffffff"/>
+    <path d="M48.48 148.23 A 120 120 0 0 1 148.23 48.48" stroke="#ffffff"/>
+    <path d="M185.77 48.48 A 120 120 0 0 1 285.52 148.23" stroke="#0175ff"/>
   </g>
+  <text x="378" y="232" fill="#ffffff" stroke="#ffffff" stroke-width="5" font-family="Arial, Helvetica, sans-serif" font-size="220" font-weight="700" letter-spacing="6">RELAY</text>
 </svg>
